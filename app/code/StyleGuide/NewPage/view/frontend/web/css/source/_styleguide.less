@@ -47,7 +47,6 @@
     .color-blocks {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
 
         .color-block-wrapper {
             display: flex;
@@ -90,6 +89,7 @@
             dd {
                 width: 68%;
                 line-height: 4rem;
+                word-wrap: break-word;
 
                 span {
                     display: inline-block;
@@ -312,6 +312,7 @@
         &.button.sg {
             text-transform: uppercase;
             border-radius: 0;
+            margin-bottom: 5px;
 
             span {
                 position: relative;
@@ -360,5 +361,30 @@
                 .lib-button-disabled();
             }
         }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .color-blocks {
+        justify-content: center;
+    }
+
+    h2 {
+        font-size: @h2-mobile_font-size;
+    }
+}
+
+
+//
+//  Desktop
+//  ____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .color-blocks {
+        justify-content: space-between;
     }
 }
