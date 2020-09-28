@@ -1,0 +1,117 @@
+//
+//  Blank theme variables
+//  _____________________________________________
+
+//
+//  Typography
+//  ---------------------------------------------
+
+//  Fonts
+@font-family-name__base: 'Open Sans';
+@font-family-name_font-awesome: Font Awesome\ 5 Free;
+@styleguide_icons-font-family: @font-family-name_font-awesome;
+@font-family-name_Roboto: 'Roboto';
+@font-family_Roboto-regular: @font-family-name_Roboto, @font-family__sans-serif;
+@font-family-name_Roboto-italic: 'Roboto-Italic';
+@font-family_Roboto-regular-italic: @font-family-name_Roboto-italic, @font-family__sans-serif;
+@font-family-name_Roboto-medium: 'Roboto-Medium';
+@font-family_Roboto-medium: @font-family-name_Roboto-medium, @font-family__sans-serif;
+@font-family-name_Roboto-medium-italic: 'Roboto-MediumItalic';
+@font-family_Roboto-medium-italic: @font-family-name_Roboto-medium-italic, @font-family__sans-serif;
+@font-family-name_Roboto-bold: 'Roboto-Bold';
+@font-family_Roboto-bold: @font-family-name_Roboto-bold, @font-family__sans-serif;
+@font-family-name_Roboto-bold-italic: 'Roboto-BoldItalic';
+@font-family_Roboto-bold-italic: @font-family-name_Roboto-bold-italic, @font-family__sans-serif;
+@font-family-name_RobotoCondensed-Light: 'RobotoCondensed-Light';
+@font-family_RobotoCondensed-Light: @font-family-name_RobotoCondensed-Light;
+@font-family-name_RobotoCondensed-LightItalic: 'RobotoCondensed-LightItalic';
+@font-family_RobotoCondensed-LightItalic: @font-family-name_RobotoCondensed-LightItalic;
+@font-family-name_RobotoCondensed-Regular: 'RobotoCondensed-Regular';
+@font-family_RobotoCondensed-Regular: @font-family-name_RobotoCondensed-Regular;
+@font-family-name_RobotoCondensed-Italic: 'RobotoCondensed-Italic';
+@font-family_RobotoCondensed-Italic: @font-family-name_RobotoCondensed-Italic;
+@font-family-name_RobotoCondensed-Bold: 'RobotoCondensed-Bold';
+@font-family_RobotoCondensed-Bold: @font-family-name_RobotoCondensed-Bold;
+@font-family-name_RobotoCondensed-BoldItalic: 'RobotoCondensed-BoldItalic';
+@font-family_RobotoCondensed-BoldItalic: @font-family-name_RobotoCondensed-BoldItalic;
+
+@font-families-roboto: font-family_Roboto-regular, font-family_Roboto-medium, font-family_Roboto-bold, font-family_Roboto-regular-italic, font-family_Roboto-medium-italic, font-family_Roboto-bold-italic;
+
+@font-size-xl: 3.2rem;
+@brand_font-size: @font-size-xl;
+@font-weight__bolder: 900;
+
+//
+// Colors
+//_______________________________________________
+
+@c-white: #ffffff;
+@c-blue-navy: #0a2148;
+@c-blue-dark: #14446e;
+@c-blue: #305d94;
+@c-blue-light: #54bceb;
+@c-orange: #ef9022;
+@c-almost-black: #222222;
+@c-gray-dark: #444444;
+@c-gray: #888888;
+@c-gray-light: #cccccc;
+@c-whitesmoke: #eeeeee;
+@c-red: #ff0000;
+@c-green-light: #71E571;
+
+@sidebar__background-color: @c-white;
+@brand-white: @c-white;
+@brand-blue-navy: @c-blue-navy;
+@brand-blue-dark: @c-blue-dark;
+@brand-blue: @c-blue;
+@brand-blue-light: @c-blue-light;
+@brand-orange: @c-orange;
+@brand-almost-black: @c-almost-black;
+@brand-gray-dark: @c-gray-dark;
+@brand-gray: @c-gray;
+@brand-gray-light: @c-gray-light;
+@brand-whitesmoke: @c-whitesmoke;
+
+@brand-colors: brand-blue-navy, brand-blue-dark, brand-blue, brand-blue-light, brand-orange, brand-almost-black, brand-gray-dark, brand-gray, brand-gray-light, brand-whitesmoke;
+
+//
+// Icons
+// _______________________________________________
+
+@autobase-icon-chevron: '\f078';
+@autobase-icon-checkmark: '\f00c';
+@autobase-icon-times: '\f00d';
+@autobase-icon-search: '\f002';
+
+//
+// Buttons
+// __________________________________________________
+
+@sg-button-color__disabled: @brand-almost-black;
+@sg-button-border__disabled: 2px solid @brand-gray-light;
+@sg-button-background__disabled: @brand-gray-light;
+
+//
+// Mixin
+// __________________________________________________
+
+.lib-font-awesome_styleguide() {
+    font-family: @styleguide_icons-font-family;
+    font-weight: @font-weight__bolder;
+    position: absolute;
+}
+
+.lib-input-clear-style() {
+    vertical-align: baseline;
+    border-radius: 1px;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.lib-button-disabled() {
+    color: @sg-button-color__disabled;
+    background: @sg-button-background__disabled;
+    border: @sg-button-border__disabled;
+}
