@@ -7,36 +7,14 @@
 //  ---------------------------------------------
 
 //  Fonts
-@font-family-name__base: 'Open Sans';
+@font-family-name__base: 'Roboto';
+@font-family-condensed: 'Roboto Condensed';
 @font-family-name_font-awesome: Font Awesome\ 5 Free;
 @styleguide_icons-font-family: @font-family-name_font-awesome;
-@font-family-name_Roboto: 'Roboto';
-@font-family_Roboto-regular: @font-family-name_Roboto, @font-family__sans-serif;
-@font-family-name_Roboto-italic: 'Roboto-Italic';
-@font-family_Roboto-regular-italic: @font-family-name_Roboto-italic, @font-family__sans-serif;
-@font-family-name_Roboto-medium: 'Roboto-Medium';
-@font-family_Roboto-medium: @font-family-name_Roboto-medium, @font-family__sans-serif;
-@font-family-name_Roboto-medium-italic: 'Roboto-MediumItalic';
-@font-family_Roboto-medium-italic: @font-family-name_Roboto-medium-italic, @font-family__sans-serif;
-@font-family-name_Roboto-bold: 'Roboto-Bold';
-@font-family_Roboto-bold: @font-family-name_Roboto-bold, @font-family__sans-serif;
-@font-family-name_Roboto-bold-italic: 'Roboto-BoldItalic';
-@font-family_Roboto-bold-italic: @font-family-name_Roboto-bold-italic, @font-family__sans-serif;
-@font-family-name_RobotoCondensed-Light: 'RobotoCondensed-Light';
-@font-family_RobotoCondensed-Light: @font-family-name_RobotoCondensed-Light;
-@font-family-name_RobotoCondensed-LightItalic: 'RobotoCondensed-LightItalic';
-@font-family_RobotoCondensed-LightItalic: @font-family-name_RobotoCondensed-LightItalic;
-@font-family-name_RobotoCondensed-Regular: 'RobotoCondensed-Regular';
-@font-family_RobotoCondensed-Regular: @font-family-name_RobotoCondensed-Regular;
-@font-family-name_RobotoCondensed-Italic: 'RobotoCondensed-Italic';
-@font-family_RobotoCondensed-Italic: @font-family-name_RobotoCondensed-Italic;
-@font-family-name_RobotoCondensed-Bold: 'RobotoCondensed-Bold';
-@font-family_RobotoCondensed-Bold: @font-family-name_RobotoCondensed-Bold;
-@font-family-name_RobotoCondensed-BoldItalic: 'RobotoCondensed-BoldItalic';
-@font-family_RobotoCondensed-BoldItalic: @font-family-name_RobotoCondensed-BoldItalic;
 
-@font-families-roboto: font-family_Roboto-regular, font-family_Roboto-medium, font-family_Roboto-bold, font-family_Roboto-regular-italic, font-family_Roboto-medium-italic, font-family_Roboto-bold-italic;
-
+@font-size-s: 1.1rem;
+@font-size-sm: 1.6rem;
+@font-size-m: 2rem;
 @font-size-xl: 3.2rem;
 @font-size-xxl: 4rem;
 @h2-mobile_font-size: @font-size-xxl;
@@ -80,10 +58,18 @@
 // Icons
 // _______________________________________________
 
-@autobase-icon-chevron: '\f078';
-@autobase-icon-checkmark: '\f00c';
-@autobase-icon-times: '\f00d';
-@autobase-icon-search: '\f002';
+@sg-icon-chevron: '\f078';
+@sg-icon-checkmark: '\f00c';
+@sg-icon-times: '\f00d';
+@sg-icon-search: '\f002';
+@sg-icon-map_marker: '\f3c5';
+@sg-icon-info_circle: '\f05a';
+@sg-icon-info_user: '\f007';
+@sg-icon-info_bag: '\f290';
+@sg-icon-help_phone: '\f095';
+@sg-icon-help_email: '\f0e0';
+@sg-icon-help_chat: '\f4ad';
+@sg-icon-help_location: '\f3c5';
 
 //
 // Buttons
@@ -100,7 +86,7 @@
 .lib-font-awesome_styleguide() {
     font-family: @styleguide_icons-font-family;
     font-weight: @font-weight__bolder;
-    position: absolute;
+    position: relative;
 }
 
 .lib-input-clear-style() {

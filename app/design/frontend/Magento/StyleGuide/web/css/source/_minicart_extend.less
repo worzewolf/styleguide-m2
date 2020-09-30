@@ -1,0 +1,47 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .minicart-wrapper .action.showcart {
+        display: flex;
+        flex-flow: column;
+        color: @text__color;
+
+        &:before {
+            .lib-font-awesome_styleguide();
+            content: @sg-icon-info_bag;
+            color: @brand-gray;
+            position: relative;
+            font-size: 2rem;
+            text-align: center;
+            line-height: inherit;
+        }
+
+        .text {
+            width: min-content;
+            height: min-content;
+            position: relative;
+            font-size: @font-size-s;
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Desktop
+//  ____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .minicart-wrapper {
+        margin-left: 2.5rem;
+    }
+}
+

@@ -1,0 +1,43 @@
+<?php
+/**
+ *magento2 Magento_Newsletter subscribe template.
+ *@author Ivan Havryliuk ivan.havryliuk95@gmail.com.
+ *@copyright 2020 worzewolf.
+ */
+?>
+<div class="block newsletter-wrap">
+    <div class="block newsletter">
+        <div class="title"><strong><?= $block->escapeHtml(__('Stay Connected')) ?></strong><?= $block->escapeHtml(__('Sign up for emails and enjoy 15% off your next full-price purchase!')) ?></div>
+        <div class="content">
+            <form class="form subscribe"
+                  novalidate
+                  action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
+                  method="post"
+                  data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+                  id="newsletter-validate-detail">
+                <div class="field newsletter">
+                    <div class="control">
+                        <label for="newsletter">
+                                <span class="label">
+                                    <?= $block->escapeHtml(__('Sign Up for Our Newsletter:')) ?>
+                                </span>
+                            <input name="email" type="email" id="newsletter"
+                                   placeholder="<?= $block->escapeHtml(__('Enter your email address')) ?>"
+                                   data-mage-init='{"mage/trim-input":{}}'
+                                   data-validate="{required:true, 'validate-email':true}"
+                            />
+                        </label>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="action subscribe primary"
+                            title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>"
+                            type="submit"
+                            aria-label="Subscribe">
+                        <span><?= $block->escapeHtml(__('Submit')) ?></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

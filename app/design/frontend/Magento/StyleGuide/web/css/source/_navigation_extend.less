@@ -1,0 +1,66 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .nav-sections {
+        background: none;
+        border-bottom: .05rem solid @brand-gray-light;
+    }
+
+    .laughlin-menu__list {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        margin-bottom: 0;
+        position: relative;
+
+        .laughlin-menu__inner-list {
+            display: none;
+            position: absolute;
+            top: 90%;
+            left: 0;
+            width: 100%;
+            background: @brand-white;
+
+            .navigation-dropdown-wrapper {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                max-width: 975px;
+                margin: 0 auto;
+            }
+        }
+
+        .laughlin-menu__item:hover > .laughlin-menu__inner-list {
+            display: block;
+        }
+
+        .laughlin-menu__link {
+            display: inline-block;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: @brand-almost-black;
+            cursor: pointer;
+            line-height: 2.4rem;
+            padding: 1rem 4rem;
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Desktop
+//  ____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .nav-sections-item-content > .laughlin-menu {
+        display: block;
+    }
+}

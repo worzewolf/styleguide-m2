@@ -1,10 +1,68 @@
 <?xml version="1.0"?>
-<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-    <referenceBlock name="after.body.start">
-        <block class="Magento\Cms\Block\Block" name="promotion.block">
-            <arguments>
-                <argument name="block_id" xsi:type="string">promotion.block</argument>
-            </arguments>
-        </block>
-    </referenceBlock>
+<page layout="1columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="after.body.start">
+            <block class="Magento\Cms\Block\Block" name="promotion.block">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">promotion.block</argument>
+                </arguments>
+            </block>
+            <referenceBlock name="logo">
+                <arguments>
+                    <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                    <argument name="logo_img_width" xsi:type="number">242</argument>
+                    <argument name="logo_img_height" xsi:type="number">58</argument>
+                    <argument name="logo_alt" xsi:type="string">Logo</argument>
+                </arguments>
+            </referenceBlock>
+        </referenceBlock>
+
+        <referenceContainer name="header-wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="custom.header.links" template="Magento_Theme::custom_header-links.phtml" before="logo"/>
+            <container name="custom_sign-in" htmlTag="div" htmlClass="custom-sign-in_wrapper" after="-">
+                <block class="Magento\Framework\View\Element\Template" name="custom.auth" template="Magento_Customer::account/custom-authentication-popup.phtml" after="-"/>
+            </container>
+        </referenceContainer>
+
+        <referenceBlock name="store.menu">
+            <block name="main.menu" class="Snowdog\Menu\Block\Menu">
+                <arguments>
+                    <argument name="menu" xsi:type="string">menu</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+        <referenceContainer name="footer">
+            <block class="Magento\Cms\Block\Block" name="footer.main" htmlTag="div" htmlClass="footer-wrap">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer.main</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="footer-container">
+            <container name="footer-bottom" htmlTag="div" htmlClass="footer-bottom" after="-">
+                <block class="Magento\Cms\Block\Block" name="footer.bottom" htmlTag="div" htmlClass="footer-wrap">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">footer.bottom</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+
+        <move element="register-link" destination="custom_sign-in_dropdown" before="-"/>
+        <move element="authorization-link" destination="custom_sign-in_dropdown" before="-"/>
+        <move element="minicart" destination="header-wrapper" after="custom_sign-in"/>
+        <move element="form.subscribe" destination="footer-container" before="-"/>
+        <move element="copyright" destination="footer-bottom" after="-"/>
+
+        <referenceBlock name="catalog.topnav" remove="true"/>
+        <referenceBlock name="header.panel" remove="true"/>
+        <referenceBlock name="top.links" remove="true"/>
+        <referenceBlock name="my-account-link" remove="true"/>
+        <referenceBlock name="wish-list-link" remove="true"/>
+        <referenceBlock name="advanced-search-link" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+    </body>
 </page>

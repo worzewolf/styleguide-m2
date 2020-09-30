@@ -2,33 +2,41 @@
 //  Typography
 //  _____________________________________________
 
-@font-family__base: @font-family_Roboto-regular;
-@heading__color__base: @brand-blue-dark;
-@h1__font-size: 5.6rem;
-@h2__font-size: 4.8rem;
-@h3__font-size: 4.1rem;
-@h4__font-size: 3.3rem;
-@h5__font-size: 2.8rem;
-@h6__font-size: 2.1rem;
-@text__color: @brand-almost-black;
-@h4__font-weight: @font-weight__regular;
-@h5__font-weight: @font-weight__regular;
-@h6__font-weight: @font-weight__regular;
-@dd__margin-bottom: @indent__m;
+//
+//  Layout
+//  _____________________________________________
+@layout__max-width: 1280px;
+@layout-indent__width: 4.2rem;
 
-.lib-magento-reset() {
-    input:not([disabled]),
-    select:not([disabled]) {
-        &:focus {
-            .lib-css(box-shadow, none);
-        }
-    }
-}
+//  Fonts
+@font-size__base: 14px;
+@font-family__base: @font-family-name__base;
+@text__color: @brand-almost-black;
+
+//  Headings
+@h1__font-size: 5.6rem;
+
+@h2__font-size: 4.8rem;
+
+@h3__font-size: 4.1rem;
+
+@h4__font-size: 3.3rem;
+@h4__font-weight: @font-weight__regular;
+
+@h5__font-size: 2.8rem;
+@h5__font-weight: @font-weight__regular;
+
+@h6__font-size: 2.1rem;
+@h6__font-weight: @font-weight__regular;
+
+@heading__color__base: @brand-blue-dark;
+
+//  Description definition
+@dd__margin-bottom: @indent__m;
 
 //
 //  Button primary
 //  ---------------------------------------------
-
 @button-primary__color: @c-blue-navy;
 @button-primary__background: @brand-white;
 @button-primary__border: 1px solid @c-blue-navy;
@@ -39,10 +47,37 @@
 //
 //  Button revert secondary color
 //  ---------------------------------------------
-
 @button__background: @c-blue-navy;
 @button__color: @brand-white;
 @button__border: 2px solid @c-blue-navy;
 @button__hover__color: @brand-white;
 @button__hover__background: @brand-blue-dark;
 @button__hover__border: 2px solid @brand-blue-dark;
+
+//  Button with icon
+@button-icon__hover__font-color:none;
+
+//
+//  Form elements
+//  ---------------------------------------------
+
+@form-element-input__background: @brand-whitesmoke;
+@form-element-input__border-color: @brand-whitesmoke;
+@form-element-input__color: @brand-almost-black;
+@form-element-input__border: none;
+@form-element-input__height: 4rem;
+@form-element-input__font-size: 1.4rem;
+
+// Placeholder
+@form-element-input-placeholder__color: @brand-almost-black;
+
+// Input focus state
+@focus__box-shadow: none;
+
+//
+//  Links
+//  _______________________________________________
+
+@link__text-decoration: none;
+@link__hover__text-decoration: none;
+@link__hover__color: @brand-blue;

@@ -1,45 +1,28 @@
+.create-style-guide-colors(@i: length(@brand-colors)) when (@i > 0) {
+    .create-style-guide-colors(@i - 1);
+    @color: extract(@brand-colors, @i);
+    @colorName: replace(~"@{color}", "brand-", "");
+    @colorVar: '@{color}';
+
+    .sg-c-@{colorName} {
+        .color-block {
+            background: @@colorVar;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            align-self: center;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.create-style-guide-colors();
+
 //
 //  Common
 //  _____________________________________________
 
 & when (@media-common = true) {
-    .create-style-guide-colors(@i: length(@brand-colors)) when (@i > 0) {
-        .create-style-guide-colors(@i - 1);
-        @color: extract(@brand-colors, @i);
-        @colorName: replace(~"@{color}", "brand-", "");
-        @colorVar: '@{color}';
-
-        .sg-c-@{colorName} {
-            .color-block {
-                background: @@colorVar;
-                border-radius: 50%;
-                width: 120px;
-                height: 120px;
-                align-self: center;
-                margin-bottom: 20px;
-            }
-        }
-    }
-
-    .create-style-guide-colors();
-
-    .create-font-style-guide(@i: length(@font-families-roboto)) when (@i > 0) {
-        .create-font-style-guide(@i - 1);
-        @fonts-roboto: extract(@font-families-roboto, @i);
-        @fontName: replace(~"@{fonts-roboto}", "font-family_", "");
-        @fonts-Var: '@{fonts-roboto}';
-
-        .sg-font-@{fontName} {
-            span {
-                font-family: @@fonts-Var;
-                font-size: @brand_font-size;
-                color: @brand-almost-black;
-            }
-        }
-    }
-
-    .create-font-style-guide();
-
     .sg-top-banner-img {
         width: 100%;
     }
@@ -89,6 +72,7 @@
             dd {
                 width: 68%;
                 line-height: 4rem;
+                font-size: @brand_font-size;
                 word-wrap: break-word;
 
                 span {
@@ -102,13 +86,30 @@
                 }
 
                 .heading-regular-c {
-                    font-family: @font-family_RobotoCondensed-Regular;
+                    font-family: @font-family-condensed;
                 }
 
                 .heading-regular-ci {
-                    font-family: @font-family-name_RobotoCondensed-LightItalic;
+                    font-family: @font-family-condensed;
                     font-style: italic;
                 }
+            }
+
+            .sg-font-Roboto-medium {
+                font-weight: 500;
+            }
+
+            .sg-font-Roboto-bold {
+                font-weight: 700;
+            }
+
+            .sg-font-Roboto-regular-italic {
+                font-style: italic;
+            }
+
+            .sg-font-Roboto-medium-italic {
+                font-weight: 500;
+                font-style: italic;
             }
         }
     }
@@ -124,7 +125,7 @@
         .styleguide-heading,
         .typo-heading {
             text-transform: uppercase;
-            font-family: @font-family_RobotoCondensed-Regular;
+            font-family: @font-family-condensed;
         }
     }
 
@@ -182,10 +183,11 @@
                 position: relative;
 
                 &:after {
-                    content: @autobase-icon-times;
                     .lib-font-awesome_styleguide();
+                    content: @sg-icon-times;
+                    position: absolute;
                     right: 0;
-                    top: -28px;
+                    top: -32px;
                     font-size: 1.5rem;
                 }
 
@@ -195,19 +197,20 @@
             }
 
             .sg-input-wrap.valid {
-                position: relative;
+                    position: relative;
 
-                &::after {
-                    content: @autobase-icon-checkmark;
-                    .lib-font-awesome_styleguide();
-                    right: 14px;
-                    top: 6px;
-                    color: @c-green-light;
-                }
+                    &::after {
+                        .lib-font-awesome_styleguide();
+                        content: @sg-icon-checkmark;
+                        position: absolute;
+                        right: 14px;
+                        top: 8px;
+                        color: @c-green-light;
+                    }
 
-                &.sg-section:after {
-                    right: 44px;
-                }
+                    &.sg-section:after {
+                        right: 44px;
+                    }
             }
 
             .sg-block-search {
@@ -275,7 +278,8 @@
         .field.cbox input:checked ~ .sg-label {
             &.cbox:after {
                 .lib-font-awesome_styleguide();
-                content: @autobase-icon-checkmark;
+                position: absolute;
+                content: @sg-icon-checkmark;
                 color: @brand-blue-navy;
                 left: 2px;
                 top: -2px;
@@ -305,6 +309,8 @@
         .lib-input-clear-style();
         position: relative;
         background: url('@{baseDir}images/select-bg.svg') no-repeat center right;
+        box-sizing: border-box;
+        border: 1px solid @brand-gray-light;
     }
 
     .action {
