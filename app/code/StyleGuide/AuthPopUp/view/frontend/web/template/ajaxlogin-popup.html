@@ -1,13 +1,14 @@
 <div class="block-authentication"
-     data-bind="afterRender: setModalElement, blockLoader: isLoading"
+     data-bind="afterRender: setAjaxModelElement, blockLoader: isLoading"
      style="display: none">
+
     <div class="block block-new-customer"
          data-bind="attr: {'data-label': $t('or')}">
         <div class="block-title">
             <strong id="block-new-customer-heading"
                     role="heading"
                     aria-level="2"
-                    data-bind="i18n: 'Checkout as a new customer'"></strong>
+                    data-bind="i18n: 'Create an Account'"></strong>
         </div>
         <div class="block-content" aria-labelledby="block-new-customer-heading">
             <p data-bind="i18n: 'Creating an account has many benefits:'"></p>
@@ -25,16 +26,13 @@
             </div>
         </div>
     </div>
-
     <div class="block block-customer-login"
          data-bind="attr: {'data-label': $t('or')}">
         <div class="block-title">
-            <strong id="block-customer-login-heading"
+            <strong id="block-customer-ajaxlogin-heading"
                     role="heading"
                     aria-level="2"
-                    data-bind="i18n: 'Your account'"></strong>
-            <span data-bind="i18n: 'registered customers'"></span>
-            <span data-bind="i18n: 'If you have an account, please log in below.'"></span>
+                    data-bind="i18n: 'Login'"></strong>
         </div>
         <!-- ko foreach: getRegion('messages') -->
         <!-- ko template: getTemplate() --><!-- /ko -->
@@ -46,27 +44,26 @@
             <form class="form form-login"
                   method="post"
                   data-bind="event: {submit: login }"
-                  id="login-form">
+                  id="ajaxlogin-form">
                 <div class="fieldset login" data-bind="attr: {'data-hasrequired': $t('* Required Fields')}">
                     <div class="field email required">
-                        <label class="label" for="customer-email"><span data-bind="i18n: 'Email Address'"></span></label>
+                        <label class="label" for="ajaxlogin-email"><span data-bind="i18n: 'Email Address'"></span></label>
                         <div class="control">
                             <input name="username"
-                                   id="customer-email"
+                                   id="ajaxlogin-email"
                                    type="email"
                                    class="input-text"
-                                   data-mage-init='{"mage/trim-input":{}}'
                                    data-bind="attr: {autocomplete: autocomplete}"
                                    data-validate="{required:true, 'validate-email':true}">
                         </div>
                     </div>
                     <div class="field password required">
-                        <label for="pass" class="label"><span data-bind="i18n: 'Password'"></span></label>
+                        <label for="ajaxlogin-pass" class="label"><span data-bind="i18n: 'Password'"></span></label>
                         <div class="control">
                             <input name="password"
                                    type="password"
                                    class="input-text"
-                                   id="pass"
+                                   id="ajaxlogin-pass"
                                    data-bind="attr: {autocomplete: autocomplete}"
                                    data-validate="{required:true}">
                         </div>
@@ -75,9 +72,8 @@
                     <!-- ko template: getTemplate() --><!-- /ko -->
                     <!-- /ko -->
                     <div class="actions-toolbar">
-                        <input name="context" type="hidden" value="checkout" />
                         <div class="primary">
-                            <button type="submit" class="action action-login secondary" name="send" id="send2">
+                            <button type="submit" class="action action-login secondary" name="send" id="ajaxlogin-send">
                                 <span data-bind="i18n: 'Sign In'"></span>
                             </button>
                         </div>

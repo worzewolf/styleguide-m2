@@ -296,6 +296,7 @@ return [
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Snowdog_Menu' => 1,
+        'StyleGuide_AuthPopUp' => 1,
         'StyleGuide_NewPage' => 1,
         'StyleGuide_StickyHeader' => 1,
         'Temando_ShippingRemover' => 1,

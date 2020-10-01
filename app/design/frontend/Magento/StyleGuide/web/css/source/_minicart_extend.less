@@ -31,8 +31,24 @@
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .minicart-wrapper {
+        margin: 0 2rem;
 
+        .action.showcart {
+            align-items: center;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .minicart-wrapper {
+        margin: 0 2rem;
+
+        .action.showcart {
+            align-items: center;
+        }
+    }
 }
 
 //

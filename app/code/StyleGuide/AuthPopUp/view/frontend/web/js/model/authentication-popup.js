@@ -19,17 +19,11 @@ define([
                 'focus': '[name=username]',
                 'responsive': true,
                 'innerScroll': true,
-                    'trigger':  '.trigger-auth-popup, .auth-btn',
+                'trigger': '.trigger-ajax-login, .auth-btn',
                 'buttons': []
             };
-
             this.modalWindow = element;
             modal(options, $(this.modalWindow));
         },
-
-        /** Show login popup window */
-        showModal: function () {
-            $(this.modalWindow).modal('openModal').trigger('contentUpdated');
-        }
     };
 });

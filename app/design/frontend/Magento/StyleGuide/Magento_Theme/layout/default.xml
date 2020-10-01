@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<page layout="1columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="after.body.start">
             <block class="Magento\Cms\Block\Block" name="promotion.block">
@@ -18,14 +19,18 @@
         </referenceBlock>
 
         <referenceContainer name="header-wrapper">
-            <block class="Magento\Framework\View\Element\Template" name="custom.header.links" template="Magento_Theme::custom_header-links.phtml" before="logo"/>
-            <container name="custom_sign-in" htmlTag="div" htmlClass="custom-sign-in_wrapper" after="-">
-                <block class="Magento\Framework\View\Element\Template" name="custom.auth" template="Magento_Customer::account/custom-authentication-popup.phtml" after="-"/>
+            <block class="Magento\Framework\View\Element\Template" name="custom.header.links"
+                   template="Magento_Theme::custom_header-links.phtml" before="logo"/>
+            <container name="header-right" htmlTag="div" htmlClass="header-right" after="-">
+                <container name="custom_sign-in" htmlTag="div" htmlClass="custom-sign-in_wrapper" after="-">
+                    <block class="Magento\Framework\View\Element\Template" name="custom.auth"
+                           template="Magento_Customer::account/custom-authentication-popup.phtml" after="-"/>
+                </container>
             </container>
         </referenceContainer>
 
         <referenceBlock name="store.menu">
-            <block name="main.menu" class="Snowdog\Menu\Block\Menu">
+            <block name="main.menu" class="Snowdog\Menu\Block\Menu" after="-">
                 <arguments>
                     <argument name="menu" xsi:type="string">menu</argument>
                 </arguments>
@@ -50,12 +55,13 @@
             </container>
         </referenceContainer>
 
-        <move element="register-link" destination="custom_sign-in_dropdown" before="-"/>
-        <move element="authorization-link" destination="custom_sign-in_dropdown" before="-"/>
-        <move element="minicart" destination="header-wrapper" after="custom_sign-in"/>
+        <move element="minicart" destination="header-right" after="custom_sign-in"/>
+        <move element="navigation.sections" destination="header.container" after="-"/>
         <move element="form.subscribe" destination="footer-container" before="-"/>
         <move element="copyright" destination="footer-bottom" after="-"/>
 
+        <referenceBlock name="authorization-link" remove="true"/>
+        <referenceBlock name="register-link" remove="true"/>
         <referenceBlock name="catalog.topnav" remove="true"/>
         <referenceBlock name="header.panel" remove="true"/>
         <referenceBlock name="top.links" remove="true"/>
