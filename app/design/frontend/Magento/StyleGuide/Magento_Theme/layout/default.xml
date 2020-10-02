@@ -29,14 +29,6 @@
             </container>
         </referenceContainer>
 
-        <referenceBlock name="store.menu">
-            <block name="main.menu" class="Snowdog\Menu\Block\Menu" after="-">
-                <arguments>
-                    <argument name="menu" xsi:type="string">menu</argument>
-                </arguments>
-            </block>
-        </referenceBlock>
-
         <referenceContainer name="footer">
             <block class="Magento\Cms\Block\Block" name="footer.main" htmlTag="div" htmlClass="footer-wrap">
                 <arguments>
@@ -62,7 +54,6 @@
 
         <referenceBlock name="authorization-link" remove="true"/>
         <referenceBlock name="register-link" remove="true"/>
-        <referenceBlock name="catalog.topnav" remove="true"/>
         <referenceBlock name="header.panel" remove="true"/>
         <referenceBlock name="top.links" remove="true"/>
         <referenceBlock name="my-account-link" remove="true"/>
@@ -72,3 +63,35 @@
         <referenceBlock name="footer_links" remove="true"/>
     </body>
 </page>
+
+
+<!--<referenceContainer name="header-wrapper" htmlClass="header_wr header grid">-->
+<!--<container name="header.right" htmlTag="div" htmlClass="header_right" after="top.search.wrapper">-->
+<!--    <container name="account.container" htmlTag="div" htmlClass="account_wr" before="-">-->
+<!--        <container name="account.dropdown.container" htmlTag="div" htmlClass="account_dropdown__wr">-->
+<!--            <block class="BlueAcorn\CmsContent\Block\AuthenticationHeader" name="authentication-popup" as="authentication-popup" template="Magento_Customer::account/authentication-header.phtml">-->
+<!--                <arguments>-->
+<!--                    <argument name="jsLayout" xsi:type="array">-->
+<!--                        <item name="components" xsi:type="array">-->
+<!--                            <item name="authenticationPopup" xsi:type="array">-->
+<!--                                <item name="component" xsi:type="string">Magento_Customer/js/view/authentication-header</item>-->
+<!--                                <item name="children" xsi:type="array">-->
+<!--                                    <item name="messages" xsi:type="array">-->
+<!--                                        <item name="component" xsi:type="string">Magento_Ui/js/view/messages</item>-->
+<!--                                        <item name="displayArea" xsi:type="string">messages</item>-->
+<!--                                    </item>-->
+<!--                                </item>-->
+<!--                            </item>-->
+<!--                        </item>-->
+<!--                    </argument>-->
+<!--                </arguments>-->
+<!--            </block>-->
+<!--            <block class="Magento\Customer\Block\Form\Login\Info" name="account.new.dropdown" template="Magento_Customer::account/newcustomer_dropdown.phtml">-->
+<!--                <arguments>-->
+<!--                    <argument name="viewModel" xsi:type="object">BlueAcorn\CmsContent\ViewModel\Customer</argument>-->
+<!--                </arguments>-->
+<!--            </block>-->
+<!--        </container>-->
+<!--    </container>-->
+<!--</container>-->
+<!--</referenceContainer>-->
