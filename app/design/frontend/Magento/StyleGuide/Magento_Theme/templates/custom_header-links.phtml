@@ -7,20 +7,20 @@
 ?>
 <div class="stores-service-wrap">
     <div class="stores-locator">
-        <a class="stores-locator-link"><?= __('stores') ?></a>
+        <a class="stores-locator-link"><?= $block->escapeHtml(__('stores')) ?></a>
     </div>
     <div class="customer-service-wrapper">
         <span><?= __('customer service') ?></span>
         <div class="customer-service-dropdown">
-            <span class="service-title"><?= __('we\'re here to help') ?></span>
-            <span><?= __('844-532-JMCL (5625) M-F, 9:30am - 5:30pm EST') ?></span>
+            <span class="service-title"><?= $block->escapeHtml(__('we\'re here to help')) ?></span>
+            <span><?= $block->escapeHtml(__('844-532-JMCL (5625) M-F, 9:30am - 5:30pm EST')) ?></span>
             <ul>
-                <li><a class="customer-service-link"><?= __('email us') ?></a></li>
-                <li><a class="customer-service-link"><?= __('contact us') ?></a></li>
-                <li><a class="customer-service-link"><?= __('track your order') ?></a></li>
-                <li><a class="customer-service-link"><?= __('return policy') ?></a></li>
-                <li><a class="customer-service-link"><?= __('sigh up for email') ?></a></li>
-                <li><a class="customer-service-link"><?= __('faq') ?></a></li>
+                <li><a class="customer-service-link"><?= $block->escapeHtml(__('email us')) ?></a></li>
+                <li><a class="customer-service-link"><?= $block->escapeHtml(__('contact us')) ?></a></li>
+                <li><a class="customer-service-link"><?= $block->escapeHtml(__('track your order')) ?></a></li>
+                <li><a class="customer-service-link"><?= $block->escapeHtml(__('return policy')) ?></a></li>
+                <li><a class="customer-service-link"><?= $block->escapeHtml(__('sigh up for email')) ?></a></li>
+                <li><a class="customer-service-link"><?= $block->escapeHtml(__('faq')) ?></a></li>
             </ul>
         </div>
     </div>
@@ -29,6 +29,6 @@
     {
         ".page-header": {
                  "StyleGuide_StickyHeader/js/sticky-header": {}
-            }
+        }
     }
 </script>

@@ -1,0 +1,28 @@
+//
+//  Desktop
+//  ____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .actions-toolbar > .primary,
+    .actions-toolbar > .primary .action,
+    .actions-toolbar > .primary .sg {
+        width: 100%;
+        text-align: center;
+    }
+
+    .actions-toolbar > .secondary {
+        float: unset;
+        width: 100%;
+        margin: 0 auto;
+        line-height: 1.6rem;
+        letter-spacing: .2rem;
+        margin-top: 1.8rem;
+        text-transform: uppercase;
+    }
+
+    .actions-toolbar .secondary a.action {
+        color: @brand-blue-navy;
+        text-decoration: underline;
+    }
+}
+

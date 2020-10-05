@@ -3,7 +3,8 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
-    .minicart-wrapper .action.showcart {
+    .minicart-wrapper .action.showcart,
+    .minicart-wrapper .action.showcart.active {
         display: flex;
         flex-flow: column;
         color: @text__color;
@@ -18,6 +19,10 @@
             line-height: inherit;
         }
 
+        &:hover:before {
+            color: @brand-gray;
+        }
+
         .text {
             width: min-content;
             height: min-content;
@@ -25,6 +30,8 @@
             font-size: @font-size-s;
         }
     }
+
+
 }
 
 //

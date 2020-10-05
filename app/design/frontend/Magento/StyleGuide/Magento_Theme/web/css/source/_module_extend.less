@@ -27,7 +27,6 @@
 
     .header.content {
         text-transform: uppercase;
-        max-width: 1440px;
     }
 
     .stores-service-wrap {
@@ -524,6 +523,10 @@
         }
     }
 
+    .custom-sign-in_wrapper .sign-in_dropdown {
+        display: none;
+    }
+
     .sg-actions-toolbar .actions {
         display: flex;
         flex-flow: column;
@@ -597,6 +600,7 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .header.content {
+        max-width: 1440px;
         display: flex;
         flex-wrap: wrap;
         padding: 0 0 .7rem;
@@ -626,6 +630,60 @@
 
         .control {
             padding: 0;
+        }
+    }
+
+    .custom-sign-in_wrapper .sign-in_dropdown {
+        display: none;
+    }
+
+    .custom-sign-in_wrapper:hover .sign-in_dropdown {
+        display: flex;
+        flex-flow: column;
+        position: absolute;
+        width: 320px;
+        background: @brand-white;
+        border: 1px solid @brand-gray-light;
+        box-sizing: border-box;
+        top: 100%;
+        right: 0;
+        padding: 1.8rem;
+        z-index: 10;
+    }
+
+    .block-new-customer,
+    .block-customer-login-wrapper {
+        .block-title span{
+            font-weight: @font-weight__heavier;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-bottom: .8rem;
+            width: 100%;
+            display: inline-block;
+        }
+
+        .note,
+        .block-content {
+            margin-bottom: 1rem;
+            text-transform: initial ;
+            font-size: 1.4rem;
+        }
+
+        .fieldset > .field:not(.choice) > .control {
+            width: 100%;
+        }
+
+        .fieldset .field {
+            margin: 0 0 1.8rem;
+        }
+
+        .block-new-customer {
+            margin-top: 1rem;
+
+            .block-content {
+                line-height: 2.4rem;
+                text-align: center;
+            }
         }
     }
 
@@ -688,7 +746,7 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
     .header.content {
         display: flex;
-        padding: 3rem 2rem .7rem;
+        padding: 3rem 4rem .7rem;
     }
 
     .block.newsletter {

@@ -26,77 +26,10 @@
 
     .nav-sections {
         border-bottom: .05rem solid @brand-gray-light;
-        background: none;
     }
 
-    .laughlin-menu__list {
-        display: flex;
-        flex-flow: row;
-        justify-content: center;
-        margin-bottom: 0;
-        position: relative;
-        font-size: 1.5rem;
-        padding: 0 1rem;
-
-        .laughlin-menu__inner-list {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background: @brand-white;
-            padding-left: 0;
-
-            .navigation-dropdown-wrapper {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                max-width: 975px;
-                margin: 0 auto;
-                padding-top: 2.5rem;
-            }
-        }
-
-        .laughlin-menu__item {
-            margin-bottom: 0;
-
-            &:first-of-type a {
-                padding-left: 0;
-            }
-
-            &:last-of-type a {
-                padding-right: 0;
-            }
-        }
-
-        .laughlin-menu__item:hover {
-
-            & > .laughlin-menu__link {
-                color: @brand-blue-dark;
-                text-decoration: underline;
-            }
-
-            & > .laughlin-menu__inner-list {
-                display: block;
-
-                .laughlin-menu__inner-link:hover {
-                    color: @brand-blue-dark;
-                    text-decoration: underline;
-                }
-            }
-        }
-
-        .laughlin-menu__link {
-            display: inline-block;
-            text-transform: uppercase;
-            line-height: 2.4rem;
-        }
-
-        .laughlin-menu__link,
-        .laughlin-menu__inner-link {
-            text-decoration: none;
-            color: @brand-almost-black;
-            cursor: pointer;
-        }
+    .navigation ul > li.level0 .level-top {
+        text-transform: uppercase;
     }
 }
 
@@ -105,7 +38,9 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-
+    .nav-sections {
+        background: @brand-white;
+    }
 }
 
 //
@@ -117,17 +52,61 @@
         margin: 0;
     }
 
-    .nav-sections-item-content > .laughlin-menu {
-        display: block;
+    .nav-sections {
+        background: none;
     }
 
-    .laughlin-menu__link {
-        padding: 1rem;
+    .navigation .level0 > .level-top:hover,
+    .navigation .level0 > .level-top.ui-state-focus,
+    .navigation .level0 > .level-top.ui-state-active {
+        color: @brand-blue-navy;
+        text-decoration: underline;
+    }
+
+    .navigation .level0 .submenu {
+        font-weight: @font-weight__regular;
+    }
+
+    .navigation .level0 .submenu a:hover,
+    .navigation .level0 .submenu a.ui-state-focus {
+        background: none;
+        color: @brand-blue-navy;
+        text-decoration: underline;
+    }
+
+    .navigation .level0.level-top {
+        &:first-child .level-top{
+            padding-left: 0;
+        }
+
+        &:last-child .level-top{
+            padding-right: 0;
+        }
+    }
+
+    .navigation {
+        background: none;
+        font-weight: @font-weight__regular;
+
+        ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        .level0 > .level-top,
+        .level0.parent > .level-top {
+            padding: 0 1rem;
+
+            & > .ui-menu-icon {
+                display: none;
+            }
+        }
     }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
-    .laughlin-menu__link {
-        padding: 1rem 4rem;
+    .navigation .level0 > .level-top,
+    .navigation .level0.parent > .level-top {
+        padding: 0 4rem;
     }
 }

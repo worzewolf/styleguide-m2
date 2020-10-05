@@ -1,0 +1,22 @@
+<?php
+/**
+ *magento2 Magento_Theme form newcustomer template.
+ *@author Ivan Havryliuk ivan.havryliuk95@gmail.com.
+ *@copyright 2020 worzewolf.
+ */
+?>
+<?php if ($block->getRegistration()->isAllowed()) : ?>
+    <div class="block-new-customer">
+        <div class="block-title">
+            <span><?= $block->escapeHtml(__('Create an account')) ?></span>
+        </div>
+        <div class="block-content">
+            <p><?= $block->escapeHtml(__('By creating an account you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.')) ?></p>
+        </div>
+        <div class="actions-toolbar">
+            <a class="action primary sg" href="<?= $block->escapeUrl($block->getCreateAccountUrl()) ?>">
+                <span><?= $block->escapeHtml(__('Create an account')) ?></span>
+            </a>
+        </div>
+    </div>
+<?php endif; ?>
