@@ -6,18 +6,18 @@
  */
 ?>
 <div class="styleguide-main-banner">
-    <img class="sg-top-banner-img" src="<?php echo $this->getViewFileUrl('StyleGuide_NewPage::images/styleguide.png'); ?>" alt="styleguide.png">
+    <img class="sg-top-banner-img" src="<?= $this->getViewFileUrl('StyleGuide_NewPage::images/styleguide.png'); ?>" alt="styleguide.png">
 </div>
 <div class="styleguide-colors">
-    <h2 class="styleguide-heading"><?= __('colors') ?></h2>
+    <h2 class="styleguide-heading"><?= $block->escapeHtml(__('colors')) ?></h2>
     <div class="color-blocks">
         <div class="color-block-wrapper sg-c-blue-navy">
             <div class="color-block"></div>
             <div class="color-txt-info">
                 <dl>
-                    <dt><?= __('blue navy') ?></dt>
-                    <dd><?= __('rgb: 10 / 33 / 72') ?></dd>
-                    <dd><?= __('hex: #0a2148') ?></dd>
+                    <dt><?= $block->escapeHtml(__('blue navy')) ?></dt>
+                    <dd><?= $block->escapeHtml(__('rgb: 10 / 33 / 72')) ?></dd>
+                    <dd><?= $block->escapeHtml(__('hex: #0a2148')) ?></dd>
                 </dl>
             </div>
         </div>
@@ -25,9 +25,9 @@
             <div class="color-block"></div>
             <div class="color-txt-info">
                 <dl>
-                    <dt><?= __('blue dark') ?></dt>
-                    <dd><?= __('rgb: 20 / 68 / 110') ?></dd>
-                    <dd><?= __('hex: #14446e') ?></dd>
+                    <dt><?= $block->escapeHtml(__('blue dark')) ?></dt>
+                    <dd><?= $block->escapeHtml(__('rgb: 20 / 68 / 110')) ?></dd>
+                    <dd><?= $block->escapeHtml(__('hex: #14446e')) ?></dd>
                 </dl>
             </div>
         </div>
@@ -35,9 +35,9 @@
             <div class="color-block"></div>
             <div class="color-txt-info">
                 <dl>
-                    <dt><?= __('blue') ?></dt>
-                    <dd><?= __('rgb: 48 / 93 / 148') ?></dd>
-                    <dd><?= __('hex: #305d94') ?></dd>
+                    <dt><?= $block->escapeHtml(__('blue')) ?></dt>
+                    <dd><?= $block->escapeHtml(__('rgb: 48 / 93 / 148')) ?></dd>
+                    <dd><?= $block->escapeHtml(__('hex: #305d94')) ?></dd>
                 </dl>
             </div>
         </div>
@@ -45,9 +45,9 @@
             <div class="color-block"></div>
             <div class="color-txt-info">
                 <dl>
-                    <dt><?= __('blue light') ?></dt>
-                    <dd><?= __('rgb: 84 / 188 / 235') ?></dd>
-                    <dd><?= __('hex: #54bceb') ?></dd>
+                    <dt><?= $block->escapeHtml(__('blue light')) ?></dt>
+                    <dd><?= $block->escapeHtml(__('rgb: 84 / 188 / 235')) ?></dd>
+                    <dd><?= $block->escapeHtml(__('hex: #54bceb')) ?></dd>
                 </dl>
             </div>
         </div>
@@ -55,9 +55,9 @@
             <div class="color-block"></div>
             <div class="color-txt-info">
                 <dl>
-                    <dt><?= __('orange') ?></dt>
-                    <dd><?= __('rgb: 239 / 144 / 34') ?></dd>
-                    <dd><?= __('hex: #ef9022') ?></dd>
+                    <dt><?= $block->escapeHtml(__('orange')) ?></dt>
+                    <dd><?= $block->escapeHtml(__('rgb: 239 / 144 / 34')) ?></dd>
+                    <dd><?= $block->escapeHtml(__('hex: #ef9022')) ?></dd>
                 </dl>
             </div>
         </div>
@@ -65,9 +65,9 @@
             <div class="color-block"></div>
             <div class="color-txt-info">
                 <dl>
-                    <dt><?= __('almost black') ?></dt>
-                    <dd><?= __('rgb: 34 / 34 / 34') ?></dd>
-                    <dd><?= __('hex: #222222') ?></dd>
+                    <dt><?= $block->escapeHtml(__('almost black')) ?></dt>
+                    <dd><?= $block->escapeHtml(__('rgb: 34 / 34 / 34')) ?></dd>
+                    <dd><?= $block->escapeHtml(__('hex: #222222')) ?></dd>
                 </dl>
             </div>
         </div>
@@ -75,9 +75,9 @@
             <div class="color-block"></div>
             <div class="color-txt-info">
                 <dl>
-                    <dt><?= __('gray dark') ?></dt>
-                    <dd><?= __('rgb: 68 / 68 / 68') ?></dd>
-                    <dd><?= __('hex: #444444') ?></dd>
+                    <dt><?= $block->escapeHtml(__('gray dark')) ?></dt>
+                    <dd><?= $block->escapeHtml(__('rgb: 68 / 68 / 68')) ?></dd>
+                    <dd><?= $block->escapeHtml(__('hex: #444444')) ?></dd>
                 </dl>
             </div>
         </div>
@@ -85,9 +85,9 @@
             <div class="color-block"></div>
             <div class="color-txt-info">
                 <dl>
-                    <dt><?= __('gray') ?></dt>
-                    <dd><?= __('rgb: 136 / 136 / 136') ?></dd>
-                    <dd><?= __('hex: #888888') ?></dd>
+                    <dt><?= $block->escapeHtml(__('gray')) ?></dt>
+                    <dd><?= $block->escapeHtml(__('rgb: 136 / 136 / 136')) ?></dd>
+                    <dd><?= $block->escapeHtml(__('hex: #888888')) ?></dd>
                 </dl>
             </div>
         </div>
@@ -95,9 +95,9 @@
             <div class="color-block"></div>
             <div class="color-txt-info">
                 <dl>
-                    <dt><?= __('gray light') ?></dt>
-                    <dd><?= __('rgb: 204 / 204 / 204') ?></dd>
-                    <dd><?= __('hex: #cccccc') ?></dd>
+                    <dt><?= $block->escapeHtml(__('gray light')) ?></dt>
+                    <dd><?= $block->escapeHtml(__('rgb: 204 / 204 / 204')) ?></dd>
+                    <dd><?= $block->escapeHtml(__('hex: #cccccc')) ?></dd>
                 </dl>
             </div>
         </div>
@@ -105,140 +105,140 @@
             <div class="color-block"></div>
             <div class="color-txt-info">
                 <dl>
-                    <dt><?= __('white smoke') ?></dt>
-                    <dd><?= __('rgb: 238 / 238 / 238') ?></dd>
-                    <dd><?= __('hex: #eeeeee') ?></dd>
+                    <dt><?= $block->escapeHtml(__('white smoke')) ?></dt>
+                    <dd><?= $block->escapeHtml(__('rgb: 238 / 238 / 238')) ?></dd>
+                    <dd><?= $block->escapeHtml(__('hex: #eeeeee')) ?></dd>
                 </dl>
             </div>
         </div>
     </div>
 </div>
 <div class="styleguide-typography">
-    <h2 class="styleguide-heading"><?= __('typography') ?></h2>
+    <h2 class="styleguide-heading"><?= $block->escapeHtml(__('typography')) ?></h2>
     <div class="fonts">
-        <h4 class="typo-heading"><?= __('font families') ?></h4>
+        <h4 class="typo-heading"><?= $block->escapeHtml(__('font families')) ?></h4>
         <dl>
-            <dt><?= __('Roboto - Regular') ?></dt>
+            <dt><?= $block->escapeHtml(__('Roboto - Regular')) ?></dt>
             <dd class="sg-font-Roboto-regular">
-                <span><?= __('ABCDEFGHIJKLMNOPQRSTUVWXYZ') ?></span>
-                <span><?= __('abcdefghijklmnopqrstuvwxyz0123456789') ?></span>
+                <span><?= $block->escapeHtml(__('ABCDEFGHIJKLMNOPQRSTUVWXYZ')) ?></span>
+                <span><?= $block->escapeHtml(__('abcdefghijklmnopqrstuvwxyz0123456789')) ?></span>
             </dd>
-            <dt><?= __('Roboto - Medium') ?></dt>
+            <dt><?= $block->escapeHtml(__('Roboto - Medium')) ?></dt>
             <dd class="sg-font-Roboto-medium">
-                <span><?= __('ABCDEFGHIJKLMNOPQRSTUVWXYZ') ?></span>
-                <span><?= __('abcdefghijklmnopqrstuvwxyz0123456789') ?></span>
+                <span><?= $block->escapeHtml(__('ABCDEFGHIJKLMNOPQRSTUVWXYZ')) ?></span>
+                <span><?= $block->escapeHtml(__('abcdefghijklmnopqrstuvwxyz0123456789')) ?></span>
             </dd>
-            <dt><?= __('Roboto - Bold') ?></dt>
+            <dt><?= $block->escapeHtml(__('Roboto - Bold')) ?></dt>
             <dd class="sg-font-Roboto-bold">
-                <span><?= __('ABCDEFGHIJKLMNOPQRSTUVWXYZ') ?></span>
-                <span><?= __('abcdefghijklmnopqrstuvwxyz0123456789') ?></span>
+                <span><?= $block->escapeHtml(__('ABCDEFGHIJKLMNOPQRSTUVWXYZ')) ?></span>
+                <span><?= $block->escapeHtml(__('abcdefghijklmnopqrstuvwxyz0123456789')) ?></span>
             </dd>
-            <dt><?= __('Roboto - Regular Italic') ?></dt>
+            <dt><?= $block->escapeHtml(__('Roboto - Regular Italic')) ?></dt>
             <dd class="sg-font-Roboto-regular-italic">
-                <span><?= __('ABCDEFGHIJKLMNOPQRSTUVWXYZ') ?></span>
-                <span><?= __('abcdefghijklmnopqrstuvwxyz0123456789') ?></span>
+                <span><?= $block->escapeHtml(__('ABCDEFGHIJKLMNOPQRSTUVWXYZ')) ?></span>
+                <span><?= $block->escapeHtml(__('abcdefghijklmnopqrstuvwxyz0123456789')) ?></span>
             </dd>
-            <dt><?= __('Roboto - Medium Italic') ?></dt>
+            <dt><?= $block->escapeHtml(__('Roboto - Medium Italic')) ?></dt>
             <dd class="sg-font-Roboto-medium-italic">
-                <span><?= __('ABCDEFGHIJKLMNOPQRSTUVWXYZ') ?></span>
-                <span><?= __('abcdefghijklmnopqrstuvwxyz0123456789') ?></span>
+                <span><?= $block->escapeHtml(__('ABCDEFGHIJKLMNOPQRSTUVWXYZ')) ?></span>
+                <span><?= $block->escapeHtml(__('abcdefghijklmnopqrstuvwxyz0123456789')) ?></span>
             </dd>
         </dl>
-        <h4 class="typo-heading"><?= __('headings') ?></h4>
+        <h4 class="typo-heading"><?= $block->escapeHtml(__('headings')) ?></h4>
         <dl>
-            <dt><?= __('Roboto Condanced - Regular') ?>
-                <span><?= __('56 / 64 / 2') ?></span>
+            <dt><?= $block->escapeHtml(__('Roboto Condanced - Regular')) ?>
+                <span><?= $block->escapeHtml(__('56 / 64 / 2')) ?></span>
             </dt>
-            <dd><h1 class="heading-regular-c"><?= __('We are where you live, work & play') ?></h1></dd>
-            <dt><?= __('Roboto Condanced - Regular') ?>
-                <span><?= __('56 / 64 / 2') ?></span>
+            <dd><h1 class="heading-regular-c"><?= $block->escapeHtml(__('We are where you live, work & play')) ?></h1></dd>
+            <dt><?= $block->escapeHtml(__('Roboto Condanced - Regular')) ?>
+                <span><?= $block->escapeHtml(__('56 / 64 / 2')) ?></span>
             </dt>
-            <dd><h2 class="heading-regular-c"><?= __('We are where you live, work & play') ?></h2></dd>
-            <dt><?= __('Roboto Condanced - Regular') ?>
-                <span><?= __('56 / 64 / 2') ?></span>
+            <dd><h2 class="heading-regular-c"><?= $block->escapeHtml(__('We are where you live, work & play')) ?></h2></dd>
+            <dt><?= $block->escapeHtml(__('Roboto Condanced - Regular')) ?>
+                <span><?= $block->escapeHtml(__('56 / 64 / 2')) ?></span>
             </dt>
-            <dd><h3 class="heading-regular-c"><?= __('We are where you live, work & play') ?></h3></dd>
-            <dt><?= __('Roboto Condanced - Regular') ?>
-                <span><?= __('56 / 64 / 2') ?></span>
+            <dd><h3 class="heading-regular-c"><?= $block->escapeHtml(__('We are where you live, work & play')) ?></h3></dd>
+            <dt><?= $block->escapeHtml(__('Roboto Condanced - Regular')) ?>
+                <span><?= $block->escapeHtml(__('56 / 64 / 2')) ?></span>
             </dt>
-            <dd><h4 class="heading-regular-c"><?= __('We are where you live, work & play') ?></h4></dd>
-            <dt><?= __('Roboto Condanced - Regular') ?>
-                <span><?= __('56 / 64 / 2') ?></span>
+            <dd><h4 class="heading-regular-c"><?= $block->escapeHtml(__('We are where you live, work & play')) ?></h4></dd>
+            <dt><?= $block->escapeHtml(__('Roboto Condanced - Regular')) ?>
+                <span><?= $block->escapeHtml(__('56 / 64 / 2')) ?></span>
             </dt>
-            <dd><h5 class="heading-regular-c"><?= __('We are where you live, work & play') ?></h5></dd>
-            <dt><?= __('Roboto Condanced - Regular') ?>
-                <span><?= __('56 / 64 / 2') ?></span>
+            <dd><h5 class="heading-regular-c"><?= $block->escapeHtml(__('We are where you live, work & play')) ?></h5></dd>
+            <dt><?= $block->escapeHtml(__('Roboto Condanced - Regular')) ?>
+                <span><?= $block->escapeHtml(__('56 / 64 / 2')) ?></span>
             </dt>
-            <dd><h6 class="heading-regular-c"><?= __('We are where you live, work & play') ?></h6></dd>
+            <dd><h6 class="heading-regular-c"><?= $block->escapeHtml(__('We are where you live, work & play')) ?></h6></dd>
         </dl>
-        <h4 class="typo-heading"><?= __('headings italic') ?></h4>
+        <h4 class="typo-heading"><?= $block->escapeHtml(__('headings italic')) ?></h4>
         <dl>
-            <dt><?= __('Roboto Condanced - Italic') ?>
-                <span><?= __('56 / 64 / 2') ?></span>
+            <dt><?= $block->escapeHtml(__('Roboto Condanced - Italic')) ?>
+                <span><?= $block->escapeHtml(__('56 / 64 / 2')) ?></span>
             </dt>
-            <dd><h1 class="heading-regular-ci"><?= __('We are where you live, work & play') ?></h1></dd>
-            <dt><?= __('Roboto Condanced - Italic') ?>
-                <span><?= __('56 / 64 / 2') ?></span>
+            <dd><h1 class="heading-regular-ci"><?= $block->escapeHtml(__('We are where you live, work & play')) ?></h1></dd>
+            <dt><?= $block->escapeHtml(__('Roboto Condanced - Italic')) ?>
+                <span><?= $block->escapeHtml(__('56 / 64 / 2')) ?></span>
             </dt>
-            <dd><h2 class="heading-regular-ci"><?= __('We are where you live, work & play') ?></h2></dd>
-            <dt><?= __('Roboto Condanced - Italic') ?>
-                <span><?= __('56 / 64 / 2') ?></span>
+            <dd><h2 class="heading-regular-ci"><?= $block->escapeHtml(__('We are where you live, work & play')) ?></h2></dd>
+            <dt><?= $block->escapeHtml(__('Roboto Condanced - Italic')) ?>
+                <span><?= $block->escapeHtml(__('56 / 64 / 2')) ?></span>
             </dt>
-            <dd><h3 class="heading-regular-ci"><?= __('We are where you live, work & play') ?></h3></dd>
-            <dt><?= __('Roboto Condanced - Italic') ?>
-                <span><?= __('56 / 64 / 2') ?></span>
+            <dd><h3 class="heading-regular-ci"><?= $block->escapeHtml(__('We are where you live, work & play')) ?></h3></dd>
+            <dt><?= $block->escapeHtml(__('Roboto Condanced - Italic')) ?>
+                <span><?= $block->escapeHtml(__('56 / 64 / 2')) ?></span>
             </dt>
-            <dd><h4 class="heading-regular-ci"><?= __('We are where you live, work & play') ?></h4></dd>
-            <dt><?= __('Roboto Condanced - Italic') ?>
-                <span><?= __('56 / 64 / 2') ?></span>
+            <dd><h4 class="heading-regular-ci"><?= $block->escapeHtml(__('We are where you live, work & play')) ?></h4></dd>
+            <dt><?= $block->escapeHtml(__('Roboto Condanced - Italic')) ?>
+                <span><?= $block->escapeHtml(__('56 / 64 / 2')) ?></span>
             </dt>
-            <dd><h5 class="heading-regular-ci"><?= __('We are where you live, work & play') ?></h5></dd>
-            <dt><?= __('Roboto Condanced - Italic') ?>
-                <span><?= __('56 / 64 / 2') ?></span>
+            <dd><h5 class="heading-regular-ci"><?= $block->escapeHtml(__('We are where you live, work & play')) ?></h5></dd>
+            <dt><?= $block->escapeHtml(__('Roboto Condanced - Italic')) ?>
+                <span><?= $block->escapeHtml(__('56 / 64 / 2')) ?></span>
             </dt>
-            <dd><h6 class="heading-regular-ci"><?= __('We are where you live, work & play') ?></h6></dd>
+            <dd><h6 class="heading-regular-ci"><?= $block->escapeHtml(__('We are where you live, work & play')) ?></h6></dd>
         </dl>
     </div>
 </div>
 <div class="styleguide-forms">
-    <h2 class="styleguide-heading"><?= __('forms') ?></h2>
+    <h2 class="styleguide-heading"><?= $block->escapeHtml(__('forms')) ?></h2>
     <form action="#" class="styleguide-form">
-        <p class="required title"><?= __('* required fields') ?></p>
+        <p class="required title"><?= $block->escapeHtml(__('* required fields')) ?></p>
         <fieldset class="sg-fieldset">
             <div class="field">
-                <label class="sg-label" for="sg-text"><?= __('text input') ?></label>
+                <label class="sg-label" for="sg-text"><?= $block->escapeHtml(__('text input')) ?></label>
                 <div class="sg-input-wrap">
                     <input type="text" id="sg-input-txt" class="input-txt" name="sg-text" value="" title="text input" autocomplete="off" tabindex="1">
                 </div>
             </div>
             <div class="field">
-                <label class="sg-label" for="sg-seacrh"><?= __('search') ?></label>
+                <label class="sg-label" for="sg-seacrh"><?= $block->escapeHtml(__('search')) ?></label>
                 <div class="sg-input-wrap">
                     <input type="text" id="sg-input-seacrh" class="input-txt" name="sg-seacrh" value="what are you looking for?" title="search input" autocomplete="off" tabindex="2">
                 </div>
             </div>
             <div class="field required">
-                <label class="sg-label" for="sg-url"><?= __('url input') ?></label>
+                <label class="sg-label" for="sg-url"><?= $block->escapeHtml(__('url input')) ?></label>
                 <div class="sg-input-wrap">
                     <input type="text" id="sg-inpt-url" class="input-txt" name="sg-url" value="" title="url input" autocomplete="off" placeholder="http://qwerty.com" required="true" tabindex="3">
                 </div>
             </div>
             <div class="field required">
-                <label class="sg-label" for="sg-tel"><?= __('telephone input') ?></label>
+                <label class="sg-label" for="sg-tel"><?= $block->escapeHtml(__('telephone input')) ?></label>
                 <div class="sg-input-wrap">
                     <input type="tel" id="sg-input-tel" class="input-txt" name="sg-tel" value="123-123-123" title="telephone input" autocomplete="off" tabindex="4">
                 </div>
             </div>
             <div class="field required">
-                <label class="sg-label" for="sg-email-error"><?= __('email input - validation error') ?></label>
+                <label class="sg-label" for="sg-email-error"><?= $block->escapeHtml(__('email input - validation error')) ?></label>
                 <div class="sg-input-wrap">
                     <input type="email" class="input-txt" name="sg-email-error" value="asd#asd.com" autocomplete="off" tabindex="5">
                     <div class="validation-failed">
-                        <?= __('Please enter a valid email, i.e johndoe@domain.com') ?> </div>
+                        <?= $block->escapeHtml(__('Please enter a valid email, i.e johndoe@domain.com')) ?> </div>
                 </div>
             </div>
             <div class="field">
-                <label class="sg-label" for="comment"><?= __('comment') ?></label>
+                <label class="sg-label" for="comment"><?= $block->escapeHtml(__('comment')) ?></label>
                 <div class="sg-input-wrap">
                     <input type="text" id="sg-comment" class="input-txt" name="comment" title="enter your comments" cols="5" rows="5" tabindex="6">
                 </div>
@@ -246,37 +246,37 @@
         </fieldset>
         <fieldset class="sg-fieldset">
             <div class="field">
-                <label class="sg-label" for="sg-placeholder"><?= __('placeholder') ?></label>
+                <label class="sg-label" for="sg-placeholder"><?= $block->escapeHtml(__('placeholder')) ?></label>
                 <div class="sg-input-wrap">
                     <input type="text" id="sg-placeholder" class="input-txt" name="sg-placeholder" value="" title="placeholder" placeholder="Search" autocomplete="off" tabindex="7">
                 </div>
             </div>
             <div class="field required">
-                <label class="sg-label" for="sg-email"><?= __('email input') ?></label>
+                <label class="sg-label" for="sg-email"><?= $block->escapeHtml(__('email input')) ?></label>
                 <div class="sg-input-wrap">
                     <input type="email" id="sg-email" class="input-txt" name="sg-email" placeholder="asd@asdas.com" autocomplete="off" tabindex="8" required="true">
                 </div>
             </div>
             <div class="field required">
-                <label class="sg-label" for="sg-password"><?= __('password input') ?></label>
+                <label class="sg-label" for="sg-password"><?= $block->escapeHtml(__('password input')) ?></label>
                 <div class="sg-input-wrap">
                     <input type="password" id="sg-password" class="input-txt" name="sg-password" value="password" autocomplete="off" tabindex="9" required="true">
                 </div>
             </div>
             <div class="field">
-                <label class="sg-label" for="sg-txt-focus"><?= __('text input - focus') ?></label>
+                <label class="sg-label" for="sg-txt-focus"><?= $block->escapeHtml(__('text input - focus')) ?></label>
                 <div class="sg-input-wrap">
                     <input type="text" id="sg-txt-focus" class="input-txt" name="sg-txt-focus" value="" title="text input" autocomplete="off" tabindex="10">
                 </div>
             </div>
             <div class="field required">
-                <label class="sg-label" for="sg-email-valid"><?= __('email input - validation passed') ?></label>
+                <label class="sg-label" for="sg-email-valid"><?= $block->escapeHtml(__('email input - validation passed')) ?></label>
                 <div class="sg-input-wrap valid">
                     <input type="email" id="sg-email-valid" class="input-txt" name="sg-email-valid" value="asd@asd.com" autocomplete="off" tabindex="11">
                 </div>
             </div>
             <div class="field sg-block-search">
-                <label class="sg-label" for="sg-embed"><?= __('embed button') ?></label>
+                <label class="sg-label" for="sg-embed"><?= $block->escapeHtml(__('embed button')) ?></label>
                 <div class="sg-input-wrap">
                     <input type="text" id="sg-embed" class="input-txt embed-search" name="sg-embed" value="Gamecocks" placeholder="What are you looking for?" autocomplete="off" tabindex="12">
                 </div>
@@ -289,21 +289,21 @@
             <div class="field cbox">
                 <input type="checkbox" id="custom-cbox1" class="sg-checkbox" name="custom-cbox" tabindex="14">
                 <label for="custom-cbox1" class="sg-label cbox">
-                    <span><?= __('custom checkbox') ?></span>
+                    <span><?= $block->escapeHtml(__('custom checkbox')) ?></span>
                     <span class="checkmark">&nbsp;</span>
                 </label>
             </div>
             <div class="field cbox">
                 <input type="checkbox" id="custom-cbox2" class="sg-checkbox" name="custom-cbox" checked="checked" tabindex="15">
                 <label for="custom-cbox2" class="sg-label cbox">
-                    <span><?= __('custom checkbox active') ?></span>
+                    <span><?= $block->escapeHtml(__('custom checkbox active')) ?></span>
                     <span class="checkmark">&nbsp;</span>
                 </label>
             </div>
             <div class="field cbox">
                 <input type="checkbox" id="custom-cbox3" class="sg-checkbox" name="custom-cbox" disabled="disabled" tabindex="16">
                 <label for="custom-cbox3" class="sg-label cbox disabled">
-                    <span><?= __('custom checkbox disabled') ?></span>
+                    <span><?= $block->escapeHtml(__('custom checkbox disabled')) ?></span>
                     <span class="checkmark">&nbsp;</span>
                 </label>
             </div>
@@ -312,87 +312,87 @@
             <div class="field cbox">
                 <input type="radio" id="custom-radio1" class="sg-radio" name="custom-radio" tabindex="17">
                 <label for="custom-radio1" class="sg-label radio">
-                    <span><?= __('custom radio') ?></span>
+                    <span><?= $block->escapeHtml(__('custom radio')) ?></span>
                     <span class="checkmark">&nbsp;</span>
                 </label>
             </div>
             <div class="field cbox">
                 <input type="radio" id="custom-radio2" class="sg-radio" checked="checked" name="custom-radio" tabindex="18">
                 <label for="custom-radio2" class="sg-label radio">
-                    <span><?= __('custom radio active') ?></span>
+                    <span><?= $block->escapeHtml(__('custom radio active')) ?></span>
                     <span class="checkmark">&nbsp;</span>
                 </label>
             </div>
             <div class="field cbox">
                 <input type="radio" id="custom-radio3" class="sg-radio" disabled="disabled" name="custom-radio" tabindex="19">
                 <label for="custom-radio" class="sg-label radio disabled">
-                    <span><?= __('custom radio disabled') ?></span>
+                    <span><?= $block->escapeHtml(__('custom radio disabled')) ?></span>
                     <span class="checkmark">&nbsp;</span>
                 </label>
             </div>
         </fieldset>
         <fieldset class="sg-fieldset">
             <div class="field required">
-                <label for="sg-select1" class="sg-label required"><?= __('state') ?></label>
+                <label for="sg-select1" class="sg-label required"><?= $block->escapeHtml(__('state')) ?></label>
                 <div class="sg-input-wrap valid sg-section">
                     <select name="sg-select1" id="sg-select1" class="sg-select valid" title="custom select" tabindex="21">
-                        <option value=""><?= __('Please select') ?></option>
-                        <option value="1"><?= __('one') ?></option>
-                        <option value="2"><?= __('two') ?></option>
-                        <option value="3"><?= __('three') ?></option>
-                        <option value="4"><?= __('four') ?></option>
+                        <option value=""><?= $block->escapeHtml(__('Please select')) ?></option>
+                        <option value="1"><?= $block->escapeHtml(__('one')) ?></option>
+                        <option value="2"><?= $block->escapeHtml(__('two')) ?></option>
+                        <option value="3"><?= $block->escapeHtml(__('three')) ?></option>
+                        <option value="4"><?= $block->escapeHtml(__('four')) ?></option>
                     </select>
                 </div>
             </div>
             <div class="field required">
-                <label for="sg-select2" class="sg-label required"><?= __('state') ?></label>
+                <label for="sg-select2" class="sg-label required"><?= $block->escapeHtml(__('state')) ?></label>
                 <div class="sg-input-wrap">
                     <select name="sg-select2" id="sg-select2" class="sg-select disabled" title="custom select" disabled="" tabindex="22">
-                        <option value=""><?= __('Please select') ?></option>
-                        <option value="1"><?= __('one') ?></option>
-                        <option value="2"><?= __('two') ?></option>
-                        <option value="3"><?= __('three') ?></option>
-                        <option value="4"><?= __('four') ?></option>
+                        <option value=""><?= $block->escapeHtml(__('Please select')) ?></option>
+                        <option value="1"><?= $block->escapeHtml(__('one')) ?></option>
+                        <option value="2"><?= $block->escapeHtml(__('two')) ?></option>
+                        <option value="3"><?= $block->escapeHtml(__('three')) ?></option>
+                        <option value="4"><?= $block->escapeHtml(__('four')) ?></option>
                     </select>
                 </div>
             </div>
         </fieldset>
         <fieldset class="sg-fieldset">
             <div class="field required">
-                <label for="sg-select3" class="sg-label required"><?= __('state') ?></label>
+                <label for="sg-select3" class="sg-label required"><?= $block->escapeHtml(__('state')) ?></label>
                 <div class="sg-input-wrap">
                     <select name="sg-select3" id="sg-select3" class="sg-select valid" title="custom select" tabindex="23">
-                        <option value=""><?= __('Please select') ?></option>
-                        <option value="1"><?= __('one') ?></option>
-                        <option value="2" selected><?= __('two') ?></option>
-                        <option value="3"><?= __('three') ?></option>
-                        <option value="4"><?= __('four') ?></option>
+                        <option value=""><?= $block->escapeHtml(__('Please select')) ?></option>
+                        <option value="1"><?= $block->escapeHtml(__('one')) ?></option>
+                        <option value="2" selected><?= $block->escapeHtml(__('two')) ?></option>
+                        <option value="3"><?= $block->escapeHtml(__('three')) ?></option>
+                        <option value="4"><?= $block->escapeHtml(__('four')) ?></option>
                     </select>
                 </div>
             </div>
             <div class="field">
-                <label for="sg-select4" class="sg-label required" tabindex="20"><?= __('state') ?></label>
+                <label for="sg-select4" class="sg-label required" tabindex="20"><?= $block->escapeHtml(__('state')) ?></label>
                 <div class="sg-input-wrap">
                     <select name="sg-select4" id="sg-select4" class="sg-select valid" title="custom select" tabindex="24">
-                        <option value=""><?= __('Would you like to know more?') ?></option>
-                        <option value="1"><?= __('yes') ?></option>
-                        <option value="2"><?= __('no') ?></option>
+                        <option value=""><?= $block->escapeHtml(__('Would you like to know more?')) ?></option>
+                        <option value="1"><?= $block->escapeHtml(__('yes')) ?></option>
+                        <option value="2"><?= $block->escapeHtml(__('no')) ?></option>
                     </select>
                 </div>
                 <div class="validation-failed sg-section">
-                    <?= __('Required. Please make a selection from the list.') ?>
+                    <?= $block->escapeHtml(__('Required. Please make a selection from the list.')) ?>
                 </div>
             </div>
         </fieldset>
     </form>
 </div>
 <div class="styleguide-buttons">
-    <h2 class="styleguide-heading"><?= __('buttons') ?></h2>
+    <h2 class="styleguide-heading"><?= $block->escapeHtml(__('buttons')) ?></h2>
     <div class="sg-actions-toolbar">
         <div class="actions">
-            <a class="action primary sg" tabindex="24"><span class=""><?= __('primary') ?></span></a>
-            <button class="action button sg" tabindex="25"><span><?= __('call to action') ?></span></button>
-            <button class="action button sg secondary" tabindex="26"><span><?= __('secondary') ?></span></button>
+            <a class="action primary sg" tabindex="24"><span class=""><?= $block->escapeHtml(__('primary')) ?></span></a>
+            <button class="action button sg" tabindex="25"><span><?= $block->escapeHtml(__('call to action')) ?></span></button>
+            <button class="action button sg secondary" tabindex="26"><span><?= $block->escapeHtml(__('secondary')) ?></span></button>
         </div>
     </div>
 </div>

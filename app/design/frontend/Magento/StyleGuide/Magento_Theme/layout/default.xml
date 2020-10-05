@@ -25,7 +25,7 @@
                 <container name="custom_sign-in" htmlTag="div" htmlClass="custom-sign-in_wrapper" after="-">
                     <block class="Magento\Framework\View\Element\Template" name="custom.auth"
                            template="Magento_Customer::account/custom-authentication-popup.phtml" before="-"/>
-                        <container name="sig-in_dropdown" htmlTag="div" htmlClass="sign-in_dropdown">
+                        <container name="sig-in_dropdown" htmlTag="div" htmlClass="sign-in_dropdown signification-modal">
                             <block class="Magento\Customer\Block\Form\Login" name="custom_customer_form_login"
                                    template="Magento_Theme::form/login.phtml"  before="-"/>
                             <block class="Magento\Customer\Block\Form\Login\Info" name="custom_customer_form_login-new_customer"
@@ -67,5 +67,6 @@
         <referenceBlock name="advanced-search-link" remove="true"/>
         <referenceBlock name="report.bugs" remove="true"/>
         <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="before.body.end" remove="true"/>
     </body>
 </page>

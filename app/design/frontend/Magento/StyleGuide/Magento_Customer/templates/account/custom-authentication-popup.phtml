@@ -6,5 +6,16 @@
  */
 ?>
 <div class="account-icon auth-btn">
-    <span><?= $block->escapeHtml(__('Sign In')) ?></span>
+    <span class="signification-btn" data-mage-init='{"toggleAdvanced": {"selectorsToggleClass": "active", "baseToggleClass": "expanded", "toggleContainers": ".signification-modal"}}'
+    ><?= $block->escapeHtml(__('Sign In')) ?></span>
 </div>
+<script>
+    require([
+        'jquery',
+        'toggleAdvanced'
+    ], function ($) {
+        'use strict';
+
+        $(".signification-btn").toggleAdvanced();
+    });
+</script>

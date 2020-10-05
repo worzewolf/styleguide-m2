@@ -1,12 +1,12 @@
 <?php
 /**
- * @package     StyleGuide\NewPage
+ * @package     Cms\Content
  * @version     1.0.0
  * @author Ivan Havryliuk ivan.havryliuk95@gmail.com.
  * @copyright 2020 worzewolf.
  */
 
-namespace StyleGuide\NewPage\Setup\Patch\Data;
+namespace Cms\Content\Setup\Patch\Data;
 
 use Magento\Cms\Api\BlockRepositoryInterface;
 use Magento\Framework\Api\SearchCriteriaBuilder;
@@ -14,7 +14,7 @@ use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Cms\Model\BlockFactory;
 
-class HeaderPromotionLink implements DataPatchInterface
+class FooterBottomLinks implements DataPatchInterface
 {
     /**
      * @var ModuleDataSetupInterface
@@ -60,11 +60,16 @@ class HeaderPromotionLink implements DataPatchInterface
      */
     public function apply()
     {
-        $identifier = 'promotion.block';
+        $identifier = 'footer.bottom';
         $blockData = [
-            'title' => 'Promotion Block',
+            'title' => 'Footer Bottom',
             'identifier' => $identifier,
-            'content' => '<p class="header-promotion">free ground shipping on orders $150 &amp;&nbsp;up <a class="header-promotion-link" href="#">details</a></p>',
+            'content' => '<div class="item">&nbsp;</div>
+<div class="footer-logo item">
+<a>Privacy</a>
+<img src="{{media url="logo/stores/1/logo-abrev.png"}}" alt="small-logo" width="32" height="32">
+<a>Terms</a>
+</div>',
             'is_active' => 1,
             'stores' => [1]
         ];

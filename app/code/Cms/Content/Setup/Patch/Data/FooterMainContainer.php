@@ -1,12 +1,12 @@
 <?php
 /**
- * @package     StyleGuide\NewPage
+ * @package     Cms\Content
  * @version     1.0.0
  * @author Ivan Havryliuk ivan.havryliuk95@gmail.com.
  * @copyright 2020 worzewolf.
  */
 
-namespace StyleGuide\NewPage\Setup\Patch\Data;
+namespace Cms\Content\Setup\Patch\Data;
 
 use Magento\Cms\Api\BlockRepositoryInterface;
 use Magento\Framework\Api\SearchCriteriaBuilder;
