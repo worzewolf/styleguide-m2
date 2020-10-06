@@ -21,6 +21,8 @@
         <referenceContainer name="header-wrapper">
             <block class="Magento\Framework\View\Element\Template" name="custom.header.links"
                    template="Magento_Theme::custom_header-links.phtml" before="logo"/>
+            <block class="Magento\Framework\View\Element\Template" name="top.search" as="topSearch"
+                   template="Magento_Search::form.mini.phtml" after="logo"/>
             <container name="header-right" htmlTag="div" htmlClass="header-right" after="-">
                 <container name="custom_sign-in" htmlTag="div" htmlClass="custom-sign-in_wrapper" after="-">
                     <block class="Magento\Framework\View\Element\Template" name="custom.auth"
@@ -34,6 +36,13 @@
                 </container>
             </container>
         </referenceContainer>
+
+        <referenceBlock name="store.menu">
+            <block class="Magento\Framework\View\Element\Template" name="top.search.menu" as="topSearchMenu"
+                   template="Magento_Theme::form/form.mini.phtml" before="catalog.topnav"/>
+            <block class="Magento\Framework\View\Element\Template" name="store.menu.additional"
+                   template="Magento_Theme::html/custom_menu-links.phtml" after="catalog.topnav"/>
+        </referenceBlock>
 
         <referenceContainer name="footer">
             <block class="Magento\Cms\Block\Block" name="footer.main" htmlTag="div" htmlClass="footer-wrap">
@@ -58,6 +67,7 @@
         <move element="form.subscribe" destination="footer-container" before="-"/>
         <move element="copyright" destination="footer-bottom" after="-"/>
 
+        <referenceBlock name="store.links" remove="true"/>
         <referenceBlock name="authorization-link" remove="true"/>
         <referenceBlock name="register-link" remove="true"/>
         <referenceBlock name="header.panel" remove="true"/>

@@ -74,7 +74,7 @@ class FooterMainContainer implements DataPatchInterface
 <div class="footer-links-wrap">
 <div class="footer-navigation">
 <div class="footer-links-col">
-<h3 class="footer-heading">About Us</h3>
+<h3 class="footer-heading"><button class="footer-action-toggle">About Us</button></h3>
 <ul class="footer-nav-list">
 <li><a>Our Story</a></li>
 <li><a>Our Stores</a></li>
@@ -83,7 +83,7 @@ class FooterMainContainer implements DataPatchInterface
 <li><a>Affiliate Program</a></li>
 <li>&nbsp;</li>
 </ul>
-<h3 class="footer-heading">Shop</h3>
+<h3 class="footer-heading"><button class="footer-action-toggle">Shop</button></h3>
 <ul class="footer-nav-list">
 <li><a>Style Guide</a></li>
 <li><a>Fabric Guide</a></li>
@@ -91,7 +91,7 @@ class FooterMainContainer implements DataPatchInterface
 </ul>
 </div>
 <div class="footer-links-col">
-<h3 class="footer-heading">Customer Service</h3>
+<h3 class="footer-heading"><button class="footer-action-toggle">Customer Service</button></h3>
 <ul class="footer-nav-list">
 <li><a>Contact Us</a></li>
 <li><a>FAQs</a></li>
@@ -104,15 +104,15 @@ class FooterMainContainer implements DataPatchInterface
 </ul>
 </div>
 <div class="footer-links-col">
-<h3 class="footer-heading">Catalog</h3>
+<h3 class="footer-heading"><button class="footer-action-toggle">Catalog</button></h3>
 <ul class="footer-nav-list">
-<li><a><img src="{{media url="logo/stores/1/catalog.jpg"}}" alt="Catalogue"></a></li>
+<li><a><img src="{{media url="catalog/category/catalog.jpg"}}" alt="Catalogue"></a></li>
 <li><a>Request A Catalog</a></li>
 <li><a>Unsubscribe From Catalog</a></li>
 </ul>
 </div>
 <div class="footer-links-col">
-<h3 class="footer-heading">Follow Us</h3>
+<h3 class="footer-heading"><button class="footer-action-toggle">Follow Us</button></h3>
 <ul class="footer-nav-list footer-socials">
 <li><a class="footer-social facebook">&nbsp;</a></li>
 <li><a class="footer-social twitter">&nbsp;</a></li>
@@ -120,7 +120,7 @@ class FooterMainContainer implements DataPatchInterface
 <li><a class="footer-social pinterest">&nbsp;</a></li>
 <li><a class="footer-social youtube">&nbsp;</a></li>
 </ul>
-<h3 class="footer-heading">Read Our Blog</h3>
+<h3 class="footer-heading"><button class="footer-action-toggle">Read Our Blog</button></h3>
 <ul class="footer-nav-list">
 <li><a>The JMC Life</a></li>
 </ul>

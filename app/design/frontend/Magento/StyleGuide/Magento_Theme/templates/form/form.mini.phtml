@@ -1,0 +1,64 @@
+<?php
+/**
+ *magento2 Magento_Theme html mobile-menu_logo template.
+ * @author Ivan Havryliuk ivan.havryliuk95@gmail.com.
+ * @copyright 2020 worzewolf.
+ */
+?>
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $helper \Magento\Search\Helper\Data */
+$helper = $this->helper(\Magento\Search\Helper\Data::class);
+?>
+<div class="nav_logo-wrap">
+    <a href="" class="logo nav_logo">
+        <img src="<?= $this->getViewFileUrl('images/logo.png') ?>" alt="<?= $block->escapeHtml(__('logo')) ?>">
+    </a>
+</div>
+<div class="top_search nav_header_search">
+    <div class="block block-search">
+        <div class="block block-title"><strong><?= $block->escapeHtml(__('Search')) ?></strong></div>
+        <div class="block block-content">
+            <form class="form minisearch" id="search_nav_form"
+                  action="<?= $block->escapeUrl($helper->getResultUrl()) ?>" method="get">
+                <div class="field search">
+                    <label class="label" for="search" data-role="minisearch-label">
+                        <span><?= $block->escapeHtml(__('Search')) ?></span>
+                    </label>
+                    <div class="control">
+                        <input id="search_nav"
+                               data-mage-init='{"quickSearch":{
+                                "formSelector":"#search_nav_form",
+                                "url":"<?= $block->escapeUrl($helper->getSuggestUrl()) ?>",
+                                "destinationSelector":"#search_nav_autocomplete",
+                                "minSearchLength":"<?= $block->escapeHtml($helper->getMinQueryLength()) ?>"}
+                           }'
+                               type="text"
+                               name="<?= $block->escapeHtmlAttr($helper->getQueryParamName()) ?>"
+                               value="<?= /* @noEscape */
+                               $helper->getEscapedQueryText() ?>"
+                               placeholder="<?= $block->escapeHtmlAttr(__('Search...')) ?>"
+                               class="input-text"
+                               maxlength="<?= $block->escapeHtmlAttr($helper->getMaxQueryLength()) ?>"
+                               role="combobox"
+                               aria-haspopup="false"
+                               aria-autocomplete="both"
+                               autocomplete="off"
+                               aria-expanded="false"/>
+                        <div id="search_nav_autocomplete" class="search-autocomplete"></div>
+                        <?= $block->getChildHtml() ?>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button type="submit"
+                            title="<?= $block->escapeHtml(__('Search')) ?>"
+                            class="action search"
+                            aria-label="Search"
+                    >
+                        <span><?= $block->escapeHtml(__('Search')) ?></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
