@@ -3,11 +3,13 @@ define(
     function($) {
     'use strict';
         return function(config, element) {
-            $(window).scroll(function () {
-                if ($(window).scrollTop() > $('.page-header').offset().top && !($('.page-header').hasClass('sticky'))) {
-                    $('.page-header').addClass('sticky');
+            var elem = $('.page-header');
+
+            $(window).on('scroll', function () {
+                if ($(window).scrollTop() > elem.offset().top && !(elem.hasClass('sticky'))) {
+                    elem.addClass('sticky');
                 } else if ($(window).scrollTop() == 0) {
-                    $('.page-header').removeClass('sticky');
+                    elem.removeClass('sticky');
                 }
             });
         }

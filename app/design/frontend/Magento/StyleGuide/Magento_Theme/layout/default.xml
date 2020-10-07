@@ -45,7 +45,7 @@
         </referenceBlock>
 
         <referenceContainer name="footer">
-            <block class="Magento\Cms\Block\Block" name="footer.main" htmlTag="div" htmlClass="footer-wrap">
+            <block class="Magento\Cms\Block\Block" name="footer.main">
                 <arguments>
                     <argument name="block_id" xsi:type="string">footer.main</argument>
                 </arguments>
@@ -54,7 +54,7 @@
 
         <referenceContainer name="footer-container">
             <container name="footer-bottom" htmlTag="div" htmlClass="footer-bottom" after="-">
-                <block class="Magento\Cms\Block\Block" name="footer.bottom" htmlTag="div" htmlClass="footer-wrap">
+                <block class="Magento\Cms\Block\Block" name="footer.bottom">
                     <arguments>
                         <argument name="block_id" xsi:type="string">footer.bottom</argument>
                     </arguments>

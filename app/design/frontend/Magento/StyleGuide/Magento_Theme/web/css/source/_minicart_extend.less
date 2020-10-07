@@ -3,35 +3,35 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
-    .minicart-wrapper .action.showcart,
-    .minicart-wrapper .action.showcart.active {
-        display: flex;
-        flex-flow: column;
-        color: @text__color;
+    .minicart-wrapper .action.showcart {
+        &,
+        &.active {
+            display: flex;
+            flex-flow: column;
+            color: @text__color;
 
-        &:before {
-            .lib-font-awesome_styleguide();
-            content: @sg-icon-info_bag;
-            color: @brand-gray;
-            position: relative;
-            font-size: 2rem;
-            text-align: center;
-            line-height: inherit;
-        }
+            &:before {
+                .lib-font-awesome_styleguide();
+                content: @sg-icon-info_bag;
+                color: @brand-gray;
+                position: relative;
+                font-size: 2rem;
+                text-align: center;
+                line-height: inherit;
+            }
 
-        &:hover:before {
-            color: @brand-gray;
-        }
+            &:hover:before {
+                color: @brand-gray;
+            }
 
-        .text {
-            width: min-content;
-            height: min-content;
-            position: relative;
-            font-size: @font-size-s;
+            .text {
+                width: min-content;
+                height: min-content;
+                position: relative;
+                font-size: @font-size-s;
+            }
         }
     }
-
-
 }
 
 //
