@@ -44,7 +44,7 @@
         width: 100%;
     }
 
-    .logo.nav_logo img{
+    .logo.nav_logo img {
         max-width: 10rem;
     }
 
@@ -130,34 +130,6 @@
         background: none;
     }
 
-    .navigation .level0 > .level-top:hover,
-    .navigation .level0 > .level-top.ui-state-focus,
-    .navigation .level0 > .level-top.ui-state-active {
-        color: @brand-blue-navy;
-        text-decoration: underline;
-    }
-
-    .navigation .level0 .submenu {
-        font-weight: @font-weight__regular;
-    }
-
-    .navigation .level0 .submenu a:hover,
-    .navigation .level0 .submenu a.ui-state-focus {
-        background: none;
-        color: @brand-blue-navy;
-        text-decoration: underline;
-    }
-
-    .navigation .level0.level-top {
-        &:first-child .level-top{
-            padding-left: 0;
-        }
-
-        &:last-child .level-top{
-            padding-right: 0;
-        }
-    }
-
     .navigation {
         background: none;
         font-weight: @font-weight__regular;
@@ -167,20 +139,50 @@
             justify-content: center;
         }
 
-        .level0 > .level-top,
-        .level0.parent > .level-top {
-            padding: 0 1rem;
+        .level0 {
+            & > .level-top,
+            &.parent > .level-top {
+                padding: 0 1rem;
 
-            & > .ui-menu-icon {
-                display: none;
+                &:hover,
+                &.ui-state-active,
+                &.ui-state-focus {
+                    color: @brand-blue-navy;
+                    text-decoration: underline;
+                }
+
+                & > .ui-menu-icon {
+                    display: none;
+                }
+            }
+
+            .submenu {
+                font-weight: @font-weight__regular;
+
+                a:hover,
+                a.ui-state-active {
+                    background: none;
+                    color: @brand-blue-navy;
+                    text-decoration: underline;
+                }
+            }
+
+            &.level-top:first-child .level-top {
+                padding-left: 0;
+            }
+
+            &.level-top:last-child .level-top {
+                padding-right: 0;
             }
         }
     }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
-    .navigation .level0 > .level-top,
-    .navigation .level0.parent > .level-top {
-        padding: 0 4rem;
+    .navigation .level0 {
+        & > .level-top,
+        &.parent > .level-top {
+            padding: 0 4rem;
+        }
     }
 }

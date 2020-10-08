@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.form.options">
+            <container name="product.price.copy" htmlTag="div" htmlClass="product-price-copy" before="product.info.options.wrapper.bottom">
+                <block class="Magento\Catalog\Pricing\Render" name="product.price.final.copy">
+                    <arguments>
+                        <argument name="price_render" xsi:type="string">product.price.render.default</argument>
+                        <argument name="price_type_code" xsi:type="string">final_price</argument>
+                        <argument name="zone" xsi:type="string">item_view</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+
+        <referenceBlock name="product.info.details">
+            <block class="Magento\Cms\Block\Block" name="custom.product.tab" group="detailed_info" after="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">custom.product.tab</argument>
+                    <argument name="at_call" xsi:type="string">getCustom</argument>
+                    <argument name="at_code" xsi:type="string">custom</argument>
+                    <argument name="css_class" xsi:type="string">custom</argument>
+                    <argument name="at_label" xsi:type="string">custom</argument>
+                    <argument name="add_attribute" xsi:type="string">itemprop="custom"</argument>
+                    <argument name="title" translate="true" xsi:type="string">Help is always here</argument>
+                    <argument name="sort_order" xsi:type="string">11</argument>
+                </arguments>
+            </block>
+
+            <referenceBlock name="product.info.description">
+                <arguments>
+                    <argument name="title" translate="true" xsi:type="string">Products Details</argument>
+                </arguments>
+            </referenceBlock>
+        </referenceBlock>
+
+        <move element="page.main.title" destination="product.info.main" before="-"/>
+        <move element="product.price.final" destination="product.info.main" after="page.main.title"/>
+        <move element="product.info.review" destination="product.info.main" before="product.info.price"/>
+        <move element="product.info.details" destination="product.info.main" after="-"/>
+
+        <referenceContainer name="product.info.social" remove="true"/>
+    </body>
+</page>
