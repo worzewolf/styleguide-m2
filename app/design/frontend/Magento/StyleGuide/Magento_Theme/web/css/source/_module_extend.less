@@ -288,7 +288,7 @@
         }
 
         &-contacts {
-            max-width: 1072px;
+            max-width: 67rem;
             margin: 0 auto;
             padding: 3rem 2rem;
             display: flex;
@@ -336,7 +336,7 @@
         }
 
         &-links-wrap {
-            max-width: 1340px;
+            max-width: 134rem;
             padding: 3.8rem 0;
             border-top: .1rem solid @brand-gray-light;
         }
@@ -569,7 +569,7 @@
             }
 
             .content {
-                max-width: 320px;
+                max-width: 20rem;
                 align-self: center;
             }
         }
@@ -617,13 +617,18 @@
             width: 100%;
         }
 
-        &-heading .footer-action-toggle {
-            width: 100%;
-            text-align: left;
+        &-heading {
+            position: relative;
+
+            .footer-action-toggle {
+                width: 100%;
+                text-align: left;
+            }
 
             &:after {
                 content: '+';
-                float: right;
+                position: absolute;
+                top: -1.5rem;
             }
 
             &.active:after {
@@ -672,7 +677,7 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .header {
         &.content {
-            max-width: 1440px;
+            max-width: 144rem;
             display: flex;
             flex-wrap: wrap;
             padding: 0 0 .7rem;
@@ -707,9 +712,9 @@
             display: flex;
             flex-flow: column;
             position: absolute;
-            width: 320px;
+            width: 32rem;
             background: @brand-white;
-            border: 1px solid @brand-gray-light;
+            border: .1rem solid @brand-gray-light;
             box-sizing: border-box;
             top: 100%;
             right: 0;
@@ -744,7 +749,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            max-width: 1072px;
+            max-width: 107.2rem;
             width: 100%;
             margin: 0 auto;
 

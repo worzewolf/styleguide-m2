@@ -66,9 +66,9 @@ class FooterBottomLinks implements DataPatchInterface
             'identifier' => $identifier,
             'content' => '<div class="item">&nbsp;</div>
 <div class="footer-logo item">
-<a>Privacy</a>
+<a href="#">Privacy</a>
 <img src="{{media url="logo/stores/1/logo-abrev.png"}}" alt="small-logo" width="32" height="32">
-<a>Terms</a>
+<a href="#">Terms</a>
 </div>',
             'is_active' => 1,
             'stores' => [1]

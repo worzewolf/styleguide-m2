@@ -65,20 +65,20 @@ class CustomProductTab implements DataPatchInterface
             'title' => 'Custom Product Tab',
             'identifier' => $identifier,
             'content' => '
-<p>Got questions? Need advice? Our customer service team is just a click or call away.</p>
-<ul>
-    <li>
-        <a href="tel:8445325625">844-532-JMCL (5625)</a>
-        <span>Monday-Friday, 9:30am - 5:30pm EST</span>
+<p class="custom-tab-preview">Got questions? Need advice? Our customer service team is just a click or call away.</p>
+<ul class="custom-tab-list">
+    <li class="tel">
+        <a class="custom-tab-link" href="tel:8445325625">844-532-JMCL (5625)</a>
+        <br>
+        <span>Monday-Friday, 9:30am - 5:30pm EST</span></li>
+    <li class="stylist">
+        <a class="custom-tab-link" href="#">Contact a Personal Stylist</a>
     </li>
-    <li>
-        <a href="#">Contact a Personal Stylist</a>
+    <li class="email">
+        <a class="custom-tab-link" href="#">customerservice@jmclaughlin.com</a>
     </li>
-    <li>
-        <a href="#">customerservice@jmclaughlin.com</a>
-    </li>
-    <li>
-        <a href="#">Live Chat</a>
+    <li class="chat">
+        <a class="custom-tab-link" href="#">Live Chat</a>
     </li>
 </ul>',
             'is_active' => 1,
