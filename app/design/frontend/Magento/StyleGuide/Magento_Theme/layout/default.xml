@@ -19,8 +19,11 @@
         </referenceBlock>
 
         <referenceContainer name="header-wrapper">
-            <block class="Magento\Framework\View\Element\Template" name="custom.header.links"
-                   template="Magento_Theme::custom_header-links.phtml" before="logo"/>
+            <block class="Magento\Cms\Block\Block" name="stores.locator" before="logo">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">stores.locator</argument>
+                </arguments>
+            </block>
             <block class="Magento\Framework\View\Element\Template" name="top.search" as="topSearch"
                    template="Magento_Search::form.mini.phtml" after="logo"/>
             <container name="header-right" htmlTag="div" htmlClass="header-right" after="-">
@@ -40,8 +43,12 @@
         <referenceBlock name="store.menu">
             <block class="Magento\Framework\View\Element\Template" name="top.search.menu" as="topSearchMenu"
                    template="Magento_Theme::form/form.mini.phtml" before="catalog.topnav"/>
-            <block class="Magento\Framework\View\Element\Template" name="store.menu.additional"
-                   template="Magento_Theme::html/custom_menu-links.phtml" after="catalog.topnav"/>
+
+            <block class="Magento\Cms\Block\Block" name="additional.menu.links" after="catalog.topnav">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">additional.menu.links</argument>
+                </arguments>
+            </block>
         </referenceBlock>
 
         <referenceContainer name="footer">

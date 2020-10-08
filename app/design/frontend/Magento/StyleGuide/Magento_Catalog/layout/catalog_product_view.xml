@@ -14,8 +14,9 @@
         </referenceContainer>
 
         <referenceBlock name="product.info.details">
-            <block class="Magento\Catalog\Block\Product\View\Description" name="custom-content" template="Magento_Catalog::product/view/customtab.phtml" group="detailed_info" after="-">
+            <block class="Magento\Cms\Block\Block" name="custom.product.tab" group="detailed_info" after="-">
                 <arguments>
+                    <argument name="block_id" xsi:type="string">custom.product.tab</argument>
                     <argument name="at_call" xsi:type="string">getCustom</argument>
                     <argument name="at_code" xsi:type="string">custom</argument>
                     <argument name="css_class" xsi:type="string">custom</argument>
@@ -39,6 +40,5 @@
         <move element="product.info.details" destination="product.info.main" after="-"/>
 
         <referenceContainer name="product.info.social" remove="true"/>
-
     </body>
 </page>

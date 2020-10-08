@@ -13,7 +13,7 @@ return [
                     'name' => 'config',
                     'xsi:type' => 'array',
                     'item' => [
-                        stic => [
+                        sticky => [
                             'name' => 'sticky',
                             'xsi:type' => 'boolean',
                             'value' => 'false',
