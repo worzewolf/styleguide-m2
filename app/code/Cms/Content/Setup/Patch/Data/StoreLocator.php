@@ -66,19 +66,20 @@ class StoreLocator implements DataPatchInterface
             'identifier' => $identifier,
             'content' => '
 <div class="stores-service-wrap">
-    <div class="stores-locator"><a class="stores-locator-link">stores</a></div>
-        <div class="customer-service-wrapper">customer service
-            <div class="customer-service-dropdown"><span class="service-title">we\'re here to help</span> 844-532-JMCL (5625) M-F, 9:30am - 5:30pm EST
-                <ul>
-                    <li><a class="customer-service-link">email us</a></li>
-                    <li><a class="customer-service-link">contact us</a></li>
-                    <li><a class="customer-service-link">track your order</a></li>
-                    <li><a class="customer-service-link">return policy</a></li>
-                    <li><a class="customer-service-link">sigh up for email</a></li>
-                    <li><a class="customer-service-link">faq</a></li>
-                </ul>
-            </div>
-        </div>
+<div class="stores-locator"><a href="#" class="stores-locator-link">stores</a></div>
+<div class="customer-service-wrapper">customer service
+<div class="customer-service-dropdown"><span class="service-title">we\'re here to help</span>
+<span>844-532-JMCL (5625) M-F, 9:30am - 5:30pm EST</span>
+<ul>
+<li><a href="#" class="customer-service-link">email us</a></li>
+<li><a href="#" class="customer-service-link">contact us</a></li>
+<li><a href="#" class="customer-service-link">track your order</a></li>
+<li><a href="#" class="customer-service-link">return policy</a></li>
+<li><a href="#" class="customer-service-link">sigh up for email</a></li>
+<li><a href="#" class="customer-service-link">faq</a></li>
+</ul>
+</div>
+</div>
 </div>',
             'is_active' => 1,
             'stores' => [1]

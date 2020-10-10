@@ -66,12 +66,12 @@ class AdditionalMenuLinks implements DataPatchInterface
             'identifier' => $identifier,
             'content' => '
 <ul class="additional-links">
-    <li class="signification"><a class="signification link">Sign In</a></li>
-    <li class="store-locator"><a class="store-locator link">Store Locator</a></li>
-    <li class="contact-us"><a class="contact-us link">Contact Us</a></li>
-    <li class="orders-status"><a class="orders-status link">Order Status</a></li>
-    <li class="email-notification"><a class="email-notification link">Sign Up For Emails</a></li>
-    <li class="request-catalog"><a class="request-catalog link">Request A Catalog</a></li>
+    <li class="signification"><a href="#" class="signification link">Sign In</a></li>
+    <li class="store-locator"><a href="#" class="store-locator link">Store Locator</a></li>
+    <li class="contact-us"><a href="#" class="contact-us link">Contact Us</a></li>
+    <li class="orders-status"><a href="#" class="orders-status link">Order Status</a></li>
+    <li class="email-notification"><a href="#" class="email-notification link">Sign Up For Emails</a></li>
+    <li class="request-catalog"><a href="#" class="request-catalog link">Request A Catalog</a></li>
 </ul>',
             'is_active' => 1,
             'stores' => [1]
